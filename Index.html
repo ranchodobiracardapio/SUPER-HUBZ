@@ -1,4 +1,85 @@
-Index.html    </a>
+<html class="scroll-smooth" lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Hubz
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+     font-family: "Inter", sans-serif;
+   }
+   /* Hide scrollbar for Chrome, Safari and Opera */
+   .no-scrollbar::-webkit-scrollbar {
+     display: none;
+   }
+   /* Hide scrollbar for IE, Edge and Firefox */
+   .no-scrollbar {
+     -ms-overflow-style: none;  /* IE and Edge */
+     scrollbar-width: none;  /* Firefox */
+   }
+  </style>
+ </head>
+ <body class="bg-white text-black relative overflow-x-hidden">
+  <!-- Sidebar Overlay -->
+  <div class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" id="sidebarOverlay" tabindex="-1">
+  </div>
+  <!-- Sidebar -->
+  <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 flex flex-col" id="sidebar">
+   <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+    <h2 class="font-bold text-lg">
+     Menu
+    </h2>
+    <button aria-label="Fechar menu" class="text-gray-600 hover:text-gray-900 focus:outline-none" id="closeSidebar">
+     <i class="fas fa-times text-xl">
+     </i>
+    </button>
+   </div>
+   <nav class="flex flex-col gap-2 p-4 overflow-y-auto no-scrollbar flex-grow">
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone promoções" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="promocao.png"/>
+     Promoções
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone conveniências" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="conve.png"/>
+     Conveniências
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone restaurantes" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="https://placehold.co/40x40/png/ffffff/000000?text=Rest"/>
+     Restaurantes
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone mercados" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="mercado.png"/>
+     Mercados
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone eletrônicos" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="eletronicos.png"/>
+     Eletrônicos
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone presentes" class="w-6 h-6 rounded-full object-contain" loading="presentes.png"/>
+     Presentes
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone móveis" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="moveis.png"/>
+     Móveis
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone varejistas" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="atacado.png"/>
+     Atacadistas
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone vestuário" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="https://placehold.co/40x40/png/ffffff/000000?text=Vest"/>
+     Vestuário
+    </a>
+    <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
+     <img alt="Ícone casa e jardim" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="Casajar.png"/>
+     Casa e Jardim
+    </a>
     <a class="flex items-center gap-3 text-gray-800 font-semibold text-sm hover:text-cyan-700" href="#">
      <img alt="Ícone boa troca" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="troca.png"/>
      Boa Troca
@@ -24,25 +105,25 @@ Index.html    </a>
      <img alt="Imagem circular de perfil" class="w-6 h-6 rounded-full object-cover" loading="lazy" src="https://placehold.co/24x24/png/000000/fff?text=Perfil"/>
     </button>
     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone categorias.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="comercio.png"/>
+     <img alt="Ícone categorias.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="menu.png"/>
      <span class="font-bold text-black whitespace-nowrap text-[10px] leading-none">
       Comércios
      </span>
     </a>
     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone comercio.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="lanches.png"/>
+     <img alt="Ícone comercio.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="comercio.png"/>
      <span class="font-bold text-black whitespace-nowrap text-[9px] leading-tight">
       Restaurantes
      </span>
     </a>
     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone restaurantes.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="farmacia.png"/>
+     <img alt="Ícone restaurantes.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="lanches.png"/>
      <span class="font-bold text-black whitespace-nowrap text-[9px] leading-tight">
       Farmácias
      </span>
     </a>
     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone farmacias.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="mercado.png"/>
+     <img alt="Ícone farmacias.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="farmacia.png"/>
      <span class="font-bold text-black whitespace-nowrap text-[9px] leading-tight">
       Mercados
      </span>
