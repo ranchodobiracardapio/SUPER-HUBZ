@@ -24,7 +24,7 @@
    }
   </style>
  </head>
- <body class="bg-white text-black relative overflow-x-hidden">
+ <body class="bg-white text-black relative overflow-x-hidden flex flex-col min-h-screen">
   <!-- Sidebar Overlay -->
   <div class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" id="sidebarOverlay" tabindex="-1">
   </div>
@@ -91,285 +91,419 @@
     </button>
    </div>
   </aside>
-  <!-- Top bar with gradient and categories -->
-  <header class="pt-1.5 pb-1 px-2 rounded-b-3xl" style="background: linear-gradient(90deg, #FF3B30 0%, #FF8C52 100%)">
-   <nav aria-label="Categorias" class="mt-0.5 flex gap-1 overflow-x-auto no-scrollbar px-1 items-center">
-    <button aria-label="Abrir menu lateral" class="flex-shrink-0 focus:outline-none" id="profileIconBtn">
-     <img alt="Imagem circular de perfil" class="w-6 h-6 rounded-full object-cover" loading="lazy" src="menu.png"/>
-    </button>
-    <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone categorias.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="comercio.png"/>
-     <span class="font-bold text-black whitespace-nowrap text-[10px] leading-none">
-      Comércios
-     </span>
-    </a>
-    <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone comercio.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="restaurantes.png"/>
-     <span class="font-bold text-black whitespace-nowrap text-[9px] leading-tight">
-      Restaurantes
-     </span>
-    </a>
-    <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone restaurantes.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="farmacia.png"/>
-     <span class="font-bold text-black whitespace-nowrap text-[9px] leading-tight">
-      Farmácias
-     </span>
-    </a>
-    <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5" href="#">
-     <img alt="Ícone farmacias.png branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="mercado.png"/>
-     <span class="font-bold text-black whitespace-nowrap text-[9px] leading-tight">
-      Mercados
-     </span>
-    </a>
-   </nav>
-  </header>
-  <!-- Banner -->
-  <section class="mt-2.5 mx-2.5">
-   <a href="#" class="block w-full max-w-full">
-    <img alt="banner1.png cinza arredondado" class="w-full max-w-screen-xl mx-auto rounded-3xl object-contain h-20" loading="lazy" src="banner1.png"/>
-   </a>
-  </section>
-  <!-- Restaurantes Section -->
-  <section class="mt-3.5 mx-2.5">
-   <h2 class="font-bold text-xs">
-    Restaurantes
-   </h2>
-   <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">
-    Os itens mais populares do Hubz
-   </h3>
-   <div class="flex gap-2.5 overflow-x-auto no-scrollbar pb-0.5">
-    <!-- Restaurante 1 -->
-    <a class="flex-shrink-0 w-20 block" href="https://marmitasdobira.netlify.app" rel="noopener noreferrer" target="_blank">
-     <img alt="mp.png quadrado com cantos arredondados cinza claro" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3539f52b-6b1a-4281-3ed1-4bea3377b9fd.jpg" width="80"/>
-     <div class="flex items-center gap-1 mt-0.5">
-      <div>
-       <p class="text-[8px] font-bold leading-tight">
-        Rancho do Bira
-       </p>
-       <p class="text-[9px] text-gray-500 leading-tight">
-        45 min
-       </p>
-      </div>
-     </div>
-    </a>
-    <!-- Restaurante 2 -->
-    <a class="flex-shrink-0 w-20 block" href="https://sweetcg.netlify.app" rel="noopener noreferrer" target="_blank">
-     <img alt="sw.png quadrado com cantos arredondados cinza claro" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/26dfdf9f-8eff-4c31-8ea6-f199c0f81728.jpg" width="80"/>
-     <div class="flex items-center gap-1 mt-0.5">
-      <div>
-       <p class="text-[8px] font-bold leading-tight">
-        Sweet Refeição
-       </p>
-       <p class="text-[9px] text-gray-500 leading-tight">
-        45 min
-       </p>
-      </div>
-     </div>
-    </a>
-    <!-- Restaurante 3 -->
-    <a class="flex-shrink-0 w-20 block" href="https://geraldoscg.netlify.app" rel="noopener noreferrer" target="_blank">
-     <img alt="ge.png quadrado com cantos arredondados cinza claro" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/42df357b-8f51-4a93-1c02-be35547d1ce3.jpg" width="80"/>
-     <div class="flex items-center gap-1 mt-0.5">
-      <div>
-       <p class="text-[8px] font-bold leading-tight">
-        Geraldo's Marmitas
-       </p>
-       <p class="text-[9px] text-gray-500 leading-tight">
-        45 min
-       </p>
-      </div>
-     </div>
-    </a>
-    <!-- Restaurante 4 -->
-    <div class="flex-shrink-0 w-20">
-     <img alt="sr.png quadrado com cantos arredondados cinza claro" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6706b4c4-12e7-422e-c419-d539a3f85813.jpg" width="80"/>
-     <div class="flex items-center gap-1 mt-0.5">
-      <div>
-       <p class="text-[8px] font-bold leading-tight">
-        Strogonof do Rei
-       </p>
-       <p class="text-[9px] text-gray-500 leading-tight">
-        45 min
-       </p>
-      </div>
-     </div>
-    </div>
-    <!-- Restaurante 5 -->
-    <div class="flex-shrink-0 w-20">
-     <img alt="pr.png quadrado com cantos arredondados cinza claro" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/262d184c-291b-4233-b229-176fbcd66e8a.jpg" width="80"/>
-     <div class="flex items-center gap-1 mt-0.5">
-      <div>
-       <p class="text-[8px] font-bold leading-tight">
-        Pro Burger
-       </p>
-       <p class="text-[9px] text-gray-500 leading-tight">
-        45 min
-       </p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Comércio Section -->
-  <section class="mt-5 mx-2.5">
-   <h2 class="font-bold text-xs">
-    Comércio
-   </h2>
-   <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">
-    As camisetas da comunidade
-   </h3>
-   <div class="flex gap-1 overflow-x-auto no-scrollbar pb-0.5">
-    <!-- Camisa 1 -->
-    <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
-     <a class="w-full" href="#">
-      <img alt="furia.png retângulo com cantos arredondados branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bca513a6-2208-468f-50bb-e81f1bea7400.jpg" width="96"/>
-     </a>
-     <p class="font-bold mt-0.5 text-center text-[8px]">
-      Camisa Fúria
-     </p>
-     <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
-      <span>
-       Ver
-      </span>
-      <span class="font-bold text-[8px]">
-       R$60
-      </span>
+  <!-- Main content container -->
+  <div class="flex-grow overflow-auto pb-20" id="appContent">
+   <!-- Top bar with gradient and categories -->
+   <header class="pt-1.5 pb-1 px-2 rounded-b-3xl" style="background: linear-gradient(90deg, #FF3B30 0%, #FF8C52 100%)">
+    <nav aria-label="Categorias" class="mt-0.5 flex gap-1 overflow-x-auto no-scrollbar px-1 items-center">
+     <button aria-label="Abrir menu lateral" class="flex-shrink-0 focus:outline-none" id="profileIconBtn">
+      <img alt="Imagem circular de perfil" class="w-6 h-6 rounded-full object-cover" loading="lazy" src="menu.png"/>
      </button>
-    </div>
-    <!-- Camisa 2 -->
-    <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
-     <a class="w-full" href="#">
-      <img alt="hubzg.png retângulo com cantos arredondados branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a12e30f8-4e03-4b81-278c-a1aced875c8c.jpg" width="96"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone comércios branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="comercio.png"/>
+      <span class="font-bold text-black text-[10px] leading-none">
+       Comércios
+      </span>
      </a>
-     <p class="font-bold mt-0.5 text-center text-[8px]">
-      Hubz UV+
-     </p>
-     <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
-      <span>
-       Ver
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone restaurantes branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="restaurantes.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Restaurantes
       </span>
-      <span class="font-bold text-[8px]">
-       R$60
-      </span>
-     </button>
-    </div>
-    <!-- Camisa 3 -->
-    <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
-     <a class="w-full" href="#">
-      <img alt="efc.png retângulo com cantos arredondados branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/298fd2c5-d2e5-49d7-4169-7d487ba69ad0.jpg" width="96"/>
      </a>
-     <p class="font-bold mt-0.5 text-center text-[8px]">
-      Camisa EFC
-     </p>
-     <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
-      <span>
-       Ver
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone farmácias branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="farmacia.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Farmácias
       </span>
-      <span class="font-bold text-[8px]">
-       R$60
-      </span>
-     </button>
-    </div>
-    <!-- Camisa 4 -->
-    <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
-     <a class="w-full" href="#">
-      <img alt="hubz-furia.png retângulo com cantos arredondados branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/73567ad2-38c6-4097-8a7e-c10bf72ac585.jpg" width="96"/>
      </a>
-     <p class="font-bold mt-0.5 text-center text-[8px]">
-      Hubz + Fúria
-     </p>
-     <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
-      <span>
-       Ver
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone mercados branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="mercado.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Mercados
       </span>
-      <span class="font-bold text-[8px]">
-       R$60
-      </span>
-     </button>
-    </div>
-    <!-- Camisa 5 -->
-    <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
-     <a class="w-full" href="#">
-      <img alt="hubz-efc.png retângulo com cantos arredondados branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a4a52e2b-6cd1-4160-45c0-983567bcdfcc.jpg" width="96"/>
      </a>
-     <p class="font-bold mt-0.5 text-center text-[8px]">
-      Hubz + EFC
-     </p>
-     <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
-      <span>
-       Ver
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone promoções branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="promocao.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Promoções
       </span>
-      <span class="font-bold text-[8px]">
-       R$60
+     </a>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone conveniências branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="conve.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Conveniências
       </span>
-     </button>
-    </div>
-   </div>
-  </section>
-  <!-- Serviços Section -->
-  <section class="mt-5 mx-2.5 mb-14">
-   <h2 class="font-bold text-xs">
-    Serviços
-   </h2>
-   <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">
-    Com o Hubz você pode:
-   </h3>
-   <div aria-label="Serviços" class="flex gap-1.5 overflow-x-auto no-scrollbar bg-white rounded-xl p-1.5 shadow-inner">
-    <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
-     <img alt="Ícone azul com garfo e faca" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0bb5b235-1831-42ca-6774-e46efc27c5be.jpg" width="36"/>
-     <span class="text-[9px] font-semibold leading-tight">
-      Pedir Refeição
-     </span>
-    </div>
-    <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
-     <img alt="Ícone amarelo com carro" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="carro.png"/>
-     <span class="text-[9px] font-semibold leading-tight">
-      Chamar Carro
-     </span>
-    </div>
-    <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
-     <img alt="Ícone verde com sacola de compras" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b035e17-b8af-44a2-700c-607496b83626.jpg" width="36"/>
-     <span class="text-[9px] font-semibold leading-tight">
-      Fazer Compras
-     </span>
-    </div>
-    <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
-     <img alt="Ícone vermelho com caixa de envio" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c40e179-a039-482e-573a-b307e70492dc.jpg" width="36"/>
-     <span class="text-[9px] font-semibold leading-tight">
-      Enviar Itens
-     </span>
-    </div>
-    <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
-     <img alt="Ícone azul com calendário" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2773888a-effd-45a1-84c2-09cf61843e30.jpg" width="36"/>
-     <span class="text-[9px] font-semibold leading-tight">
-      Ver Eventos
-     </span>
-    </div>
-   </div>
-  </section>
+     </a>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone eletrônicos branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="eletronicos.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Eletrônicos
+      </span>
+     </a>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone reformas branco redondo" class="w-6 h-6 rounded-full object-contain" height="24" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dd6cb9d0-1746-4df1-fa9d-df8e4b50ad04.jpg" width="24"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Reformas
+      </span>
+     </a>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone casa e jardim branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="Casajar.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Casa e Jardim
+      </span>
+     </a>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone vestuário branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="vestuario.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Vestuário
+      </span>
+     </a>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone atacadistas branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="atacado.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Atacadistas
+      </span>
+     </a>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-1.5 py-0.5 whitespace-nowrap" href="#">
+      <img alt="Ícone boa troca branco redondo" class="w-6 h-6 rounded-full object-contain" loading="lazy" src="troca.png"/>
+      <span class="font-bold text-black text-[9px] leading-tight">
+       Boa Troca
+      </span>
+     </a>
+    </nav>
+   </header>
+   <!-- Content area -->
+   <main class="px-2.5 mt-2.5 max-w-screen-xl mx-auto" id="mainContent">
+    <!-- Initial content: Banner -->
+    <section class="" id="page-home">
+     <a class="block w-full" href="#">
+      <img alt="banner1.png cinza arredondado" class="w-full rounded-3xl object-contain h-20 max-h-20" loading="lazy" src="banner1.png"/>
+     </a>
+     <!-- Restaurantes Section -->
+     <section class="mt-3.5">
+      <h2 class="font-bold text-xs">
+       Restaurantes
+      </h2>
+      <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">
+       Os itens mais populares do Hubz
+      </h3>
+      <div class="flex gap-2.5 overflow-x-auto no-scrollbar pb-0.5">
+       <a class="flex-shrink-0 w-20 block" href="https://marmitasdobira.netlify.app" rel="noopener noreferrer" target="_blank">
+        <img alt="Rancho do Bira prato de comida caseira com arroz, feijão, carne e salada em fundo rústico" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3539f52b-6b1a-4281-3ed1-4bea3377b9fd.jpg" width="80"/>
+        <div class="flex items-center gap-1 mt-0.5">
+         <div>
+          <p class="text-[8px] font-bold leading-tight">
+           Rancho do Bira
+          </p>
+          <p class="text-[9px] text-gray-500 leading-tight">
+           45 min
+          </p>
+         </div>
+        </div>
+       </a>
+       <a class="flex-shrink-0 w-20 block" href="https://sweetcg.netlify.app" rel="noopener noreferrer" target="_blank">
+        <img alt="Sweet Refeição sobremesa doce com frutas vermelhas e chantilly em prato branco" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/26dfdf9f-8eff-4c31-8ea6-f199c0f81728.jpg" width="80"/>
+        <div class="flex items-center gap-1 mt-0.5">
+         <div>
+          <p class="text-[8px] font-bold leading-tight">
+           Sweet Refeição
+          </p>
+          <p class="text-[9px] text-gray-500 leading-tight">
+           45 min
+          </p>
+         </div>
+        </div>
+       </a>
+       <a class="flex-shrink-0 w-20 block" href="https://geraldoscg.netlify.app" rel="noopener noreferrer" target="_blank">
+        <img alt="Geraldo's Marmitas marmita com arroz, feijão, carne e legumes em embalagem plástica" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/42df357b-8f51-4a93-1c02-be35547d1ce3.jpg" width="80"/>
+        <div class="flex items-center gap-1 mt-0.5">
+         <div>
+          <p class="text-[8px] font-bold leading-tight">
+           Geraldo's Marmitas
+          </p>
+          <p class="text-[9px] text-gray-500 leading-tight">
+           45 min
+          </p>
+         </div>
+        </div>
+       </a>
+       <div class="flex-shrink-0 w-20">
+        <img alt="Strogonof do Rei prato de strogonoff com arroz branco e batata palha em fundo claro" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6706b4c4-12e7-422e-c419-d539a3f85813.jpg" width="80"/>
+        <div class="flex items-center gap-1 mt-0.5">
+         <div>
+          <p class="text-[8px] font-bold leading-tight">
+           Strogonof do Rei
+          </p>
+          <p class="text-[9px] text-gray-500 leading-tight">
+           45 min
+          </p>
+         </div>
+        </div>
+       </div>
+       <div class="flex-shrink-0 w-20">
+        <img alt="Pro Burger hambúrguer artesanal com queijo, alface e tomate em pão brioche" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/262d184c-291b-4233-b229-176fbcd66e8a.jpg" width="80"/>
+        <div class="flex items-center gap-1 mt-0.5">
+         <div>
+          <p class="text-[8px] font-bold leading-tight">
+           Pro Burger
+          </p>
+          <p class="text-[9px] text-gray-500 leading-tight">
+           45 min
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+     <!-- Comércio Section -->
+     <section class="mt-5">
+      <h2 class="font-bold text-xs">
+       Comércio
+      </h2>
+      <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">
+       As camisetas da comunidade
+      </h3>
+      <div class="flex gap-1 overflow-x-auto no-scrollbar pb-0.5">
+       <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+        <a class="w-full" href="#">
+         <img alt="Camisa Fúria camiseta preta com estampa branca e vermelha em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bca513a6-2208-468f-50bb-e81f1bea7400.jpg" width="96"/>
+        </a>
+        <p class="font-bold mt-0.5 text-center text-[8px]">
+         Camisa Fúria
+        </p>
+        <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+         <span>
+          Ver
+         </span>
+         <span class="font-bold text-[8px]">
+          R$60
+         </span>
+        </button>
+       </div>
+       <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+        <a class="w-full" href="#">
+         <img alt="Hubz UV+ camiseta branca com logo colorido em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a12e30f8-4e03-4b81-278c-a1aced875c8c.jpg" width="96"/>
+        </a>
+        <p class="font-bold mt-0.5 text-center text-[8px]">
+         Hubz UV+
+        </p>
+        <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+         <span>
+          Ver
+         </span>
+         <span class="font-bold text-[8px]">
+          R$60
+         </span>
+        </button>
+       </div>
+       <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+        <a class="w-full" href="#">
+         <img alt="Camisa EFC camiseta azul com estampa branca em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/298fd2c5-d2e5-49d7-4169-7d487ba69ad0.jpg" width="96"/>
+        </a>
+        <p class="font-bold mt-0.5 text-center text-[8px]">
+         Camisa EFC
+        </p>
+        <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+         <span>
+          Ver
+         </span>
+         <span class="font-bold text-[8px]">
+          R$60
+         </span>
+        </button>
+       </div>
+       <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+        <a class="w-full" href="#">
+         <img alt="Hubz + Fúria camiseta preta com logo colorido e estampa vermelha em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/73567ad2-38c6-4097-8a7e-c10bf72ac585.jpg" width="96"/>
+        </a>
+        <p class="font-bold mt-0.5 text-center text-[8px]">
+         Hubz + Fúria
+        </p>
+        <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+         <span>
+          Ver
+         </span>
+         <span class="font-bold text-[8px]">
+          R$60
+         </span>
+        </button>
+       </div>
+       <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+        <a class="w-full" href="#">
+         <img alt="Hubz + EFC camiseta azul com logo colorido e estampa branca em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a4a52e2b-6cd1-4160-45c0-983567bcdfcc.jpg" width="96"/>
+        </a>
+        <p class="font-bold mt-0.5 text-center text-[8px]">
+         Hubz + EFC
+        </p>
+        <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+         <span>
+          Ver
+         </span>
+         <span class="font-bold text-[8px]">
+          R$60
+         </span>
+        </button>
+       </div>
+      </div>
+     </section>
+     <!-- Serviços Section -->
+     <section class="mt-5">
+      <h2 class="font-bold text-xs">
+       Serviços
+      </h2>
+      <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">
+       Com o Hubz você pode:
+      </h3>
+      <div aria-label="Serviços" class="flex gap-1.5 overflow-x-auto no-scrollbar bg-white rounded-xl p-1.5 shadow-inner">
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+        <img alt="Ícone azul com garfo e faca" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0bb5b235-1831-42ca-6774-e46efc27c5be.jpg" width="36"/>
+        <span class="text-[9px] font-semibold leading-tight">
+         Pedir Refeição
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+        <img alt="Ícone amarelo com carro" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="carro.png"/>
+        <span class="text-[9px] font-semibold leading-tight">
+         Chamar Carro
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+        <img alt="Ícone verde com sacola de compras" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b035e17-b8af-44a2-700c-607496b83626.jpg" width="36"/>
+        <span class="text-[9px] font-semibold leading-tight">
+         Fazer Compras
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+        <img alt="Ícone vermelho com caixa de envio" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c40e179-a039-482e-573a-b307e70492dc.jpg" width="36"/>
+        <span class="text-[9px] font-semibold leading-tight">
+         Enviar Itens
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+        <img alt="Ícone azul com calendário" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2773888a-effd-45a1-84c2-09cf61843e30.jpg" width="36"/>
+        <span class="text-[9px] font-semibold leading-tight">
+         Ver Eventos
+        </span>
+       </div>
+      </div>
+     </section>
+     <!-- Grupos do Zap Section -->
+     <section class="mt-5 mb-14">
+      <h2 class="font-bold text-xs">
+       Grupos do Zap
+      </h2>
+      <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-2">
+       Participe dos grupos do WhatsApp da comunidade
+      </h3>
+      <div class="flex flex-col gap-3" id="gruposZapContainer">
+       <a aria-label="Grupo Hubz Moto Parts" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" href="https://chat.whatsapp.com/DaHhOoEPsYgK0pYn9QY8hU?mode=r_t" rel="noopener noreferrer" target="_blank">
+        <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/607cb465-948b-42f2-9136-53cebe15e943.jpg" width="32"/>
+        <div class="flex flex-col">
+         <span class="font-semibold text-sm">
+          🔧 Hubz Moto Parts
+         </span>
+         <p class="text-xs leading-tight">
+          Grupo para venda, troca de peças, ajuda com motos, socorro e muito mais.
+         </p>
+        </div>
+       </a>
+      </div>
+      <button class="mt-3 w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-2 rounded-lg transition-colors" id="verTodosBtn">
+       Ver todos
+      </button>
+     </section>
+     <!-- Móveis Section -->
+     <section class="mt-5 mb-14">
+      <h2 class="font-bold text-xs">
+       Móveis
+      </h2>
+      <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-2">
+       Confira as marcenarias mais populares
+      </h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+       <a class="block bg-white rounded-3xl shadow-md p-3 flex flex-col items-center" href="#">
+        <img alt="Logo da Marcenaria Móveis Oscar, letras estilizadas em azul e branco" class="w-24 h-24 object-contain rounded-xl mb-2" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/73beea6e-f358-43fe-ae17-e5cf4a7a9ae9.jpg" width="96"/>
+        <p class="text-[9px] font-bold text-center">
+         Marcenaria Móveis Oscar
+        </p>
+        <p class="text-[8px] text-gray-600 mt-0.5 text-center">
+         Especializada em móveis sob medida e design personalizado.
+        </p>
+       </a>
+       <a class="block bg-white rounded-3xl shadow-md p-3 flex flex-col items-center" href="#">
+        <img alt="Logo da Marcenaria ArtWood, símbolo de madeira estilizada em marrom" class="w-24 h-24 object-contain rounded-xl mb-2" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6cea078d-f9a6-43a7-dd14-8b19f37c08f7.jpg" width="96"/>
+        <p class="text-[9px] font-bold text-center">
+         Marcenaria ArtWood
+        </p>
+        <p class="text-[8px] text-gray-600 mt-0.5 text-center">
+         Móveis rústicos e modernos com acabamento artesanal.
+        </p>
+       </a>
+       <a class="block bg-white rounded-3xl shadow-md p-3 flex flex-col items-center" href="#">
+        <img alt="Logo da Marcenaria Casa Bela, ícone de casa e madeira em verde" class="w-24 h-24 object-contain rounded-xl mb-2" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2ca3c5fb-9a20-4cf0-2b42-07ab422ecca3.jpg" width="96"/>
+        <p class="text-[9px] font-bold text-center">
+         Marcenaria Casa Bela
+        </p>
+        <p class="text-[8px] text-gray-600 mt-0.5 text-center">
+         Móveis planejados para ambientes residenciais e comerciais.
+        </p>
+       </a>
+       <a class="block bg-white rounded-3xl shadow-md p-3 flex flex-col items-center" href="#">
+        <img alt="Logo da Marcenaria DesignFino, letras estilizadas em preto e dourado" class="w-24 h-24 object-contain rounded-xl mb-2" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/938482df-018f-491c-9862-2e6801e408bf.jpg" width="96"/>
+        <p class="text-[9px] font-bold text-center">
+         Marcenaria DesignFino
+        </p>
+        <p class="text-[8px] text-gray-600 mt-0.5 text-center">
+         Peças exclusivas com design contemporâneo e materiais nobres.
+        </p>
+       </a>
+       <a class="block bg-white rounded-3xl shadow-md p-3 flex flex-col items-center" href="#">
+        <img alt="Logo da Marcenaria WoodArt, símbolo de árvore estilizada em marrom escuro" class="w-24 h-24 object-contain rounded-xl mb-2" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b3dffe23-ef10-4633-185f-ab2690cbbd27.jpg" width="96"/>
+        <p class="text-[9px] font-bold text-center">
+         Marcenaria WoodArt
+        </p>
+        <p class="text-[8px] text-gray-600 mt-0.5 text-center">
+         Móveis artesanais com foco em sustentabilidade e qualidade.
+        </p>
+       </a>
+       <a class="block bg-white rounded-3xl shadow-md p-3 flex flex-col items-center" href="#">
+        <img alt="Logo da Marcenaria Nova Forma, design geométrico em azul claro" class="w-24 h-24 object-contain rounded-xl mb-2" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c9f6c8c-09fe-4988-92b4-3ed2bea9c0a7.jpg" width="96"/>
+        <p class="text-[9px] font-bold text-center">
+         Marcenaria Nova Forma
+        </p>
+        <p class="text-[8px] text-gray-600 mt-0.5 text-center">
+         Soluções em móveis planejados com tecnologia e inovação.
+        </p>
+       </a>
+      </div>
+     </section>
+    </section>
+   </main>
+  </div>
   <!-- Bottom Navigation -->
-  <nav aria-label="Navegação principal" class="fixed bottom-0 left-0 right-0 bg-black pt-3 pb-4 px-4 flex justify-between items-center">
-   <button class="flex flex-col items-center text-white font-semibold text-[10px]" type="button">
+  <nav aria-label="Navegação principal" class="fixed bottom-0 left-0 right-0 bg-black pt-3 pb-4 px-4 flex justify-between items-center z-50">
+   <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-home" type="button">
     <i class="fas fa-home fa-lg mb-0.5">
     </i>
     Início
    </button>
-   <button class="flex flex-col items-center text-white font-semibold text-[10px]" type="button">
+   <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-transporte" type="button">
     <i class="fas fa-car fa-lg mb-0.5">
     </i>
     Transporte
    </button>
-   <button class="flex flex-col items-center text-white font-semibold text-[10px]" type="button">
+   <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-vender" type="button">
     <i class="fas fa-box fa-lg mb-0.5">
     </i>
     Vender
    </button>
-   <button class="flex flex-col items-center text-white font-semibold text-[10px]" type="button">
+   <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-entregar" type="button">
     <i class="fas fa-motorcycle fa-lg mb-0.5">
     </i>
     Entregar
    </button>
-   <button class="flex flex-col items-center text-white font-semibold text-[10px]" type="button">
+   <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-perfil" type="button">
     <i class="fas fa-user fa-lg mb-0.5">
     </i>
     Perfil
@@ -380,6 +514,10 @@
    const sidebarOverlay = document.getElementById('sidebarOverlay');
    const profileIconBtn = document.getElementById('profileIconBtn');
    const closeSidebarBtn = document.getElementById('closeSidebar');
+   const appContent = document.getElementById('appContent');
+   const mainContent = document.getElementById('mainContent');
+   const verTodosBtn = document.getElementById('verTodosBtn');
+   const gruposZapContainer = document.getElementById('gruposZapContainer');
 
    function openSidebar() {
      sidebar.classList.remove('-translate-x-full');
@@ -402,6 +540,276 @@
      if (e.key === 'Escape' && !sidebar.classList.contains('-translate-x-full')) {
        closeSidebar();
      }
+   });
+
+   // Navigation buttons
+   const navHome = document.getElementById('nav-home');
+   const navTransporte = document.getElementById('nav-transporte');
+   const navVender = document.getElementById('nav-vender');
+   const navEntregar = document.getElementById('nav-entregar');
+   const navPerfil = document.getElementById('nav-perfil');
+
+   // Full grupos do zap HTML for "Ver todos"
+   const fullGruposZapHTML = `
+    <a href="https://chat.whatsapp.com/DaHhOoEPsYgK0pYn9QY8hU?mode=r_t" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Hubz Moto Parts">
+     <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+     <div class="flex flex-col">
+      <span class="font-semibold text-sm">🔧 Hubz Moto Parts</span>
+      <p class="text-xs leading-tight">Grupo para venda, troca de peças, ajuda com motos, socorro e muito mais.</p>
+     </div>
+    </a>
+    <a href="https://chat.whatsapp.com/LeyjZAZRN46D8vsEkvLq9d" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Hiper Vendas & Trocas">
+     <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+     <div class="flex flex-col">
+      <span class="font-semibold text-sm">🛍️ Hiper Vendas & Trocas</span>
+      <p class="text-xs leading-tight">Aqui você pode divulgar produtos, procurar ofertas e negociar de forma direta e rápida.</p>
+     </div>
+    </a>
+    <a href="https://chat.whatsapp.com/LHxsEEmXWr8357LdTnT4aD" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Free Amigos da Entrega">
+     <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+     <div class="flex flex-col">
+      <span class="font-semibold text-sm">🛵 Free Amigos da Entrega</span>
+      <p class="text-xs leading-tight">Grupo para publicar ou pegar vagas de freela nas entregas.</p>
+     </div>
+    </a>
+    <a href="https://chat.whatsapp.com/IXsGhgCQSuf73EyC09t457?mode=r_t" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Free Entregas Campo Grande">
+     <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+     <div class="flex flex-col">
+      <span class="font-semibold text-sm">🍔 Free Entregas Campo Grande</span>
+      <p class="text-xs leading-tight">Conexão entre entregadores e estabelecimentos para delivery de produtos e alimentos.</p>
+     </div>
+    </a>
+    <a href="https://chat.whatsapp.com/LAW9Xy5Jl4Z7fQc0ztMUfn" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Reporte o Trânsito">
+     <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+     <div class="flex flex-col">
+      <span class="font-semibold text-sm">🚦 Reporte o Trânsito</span>
+      <p class="text-xs leading-tight">Compartilhe informações em tempo real sobre trânsito, ocorrências, tráfego e dicas de rota.</p>
+     </div>
+    </a>
+    <a href="https://chat.whatsapp.com/IZJWa64CT7iFptiTUCGVxn" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Salve o Rango">
+     <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+     <div class="flex flex-col">
+      <span class="font-semibold text-sm">🥗 Salve o Rango – Troca, Doação e Venda Justa de Alimentos</span>
+      <p class="text-xs leading-tight">Grupo para reduzir o desperdício e promover solidariedade.</p>
+     </div>
+    </a>
+    <a href="https://chat.whatsapp.com/BUtaXo64zfCA8uk1dYOwPH" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Memes & Figurinhas">
+     <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+     <div class="flex flex-col">
+      <span class="font-semibold text-sm">😂 Memes & Figurinhas</span>
+      <p class="text-xs leading-tight">Grupo para se divertir, compartilhar memes e figurinhas!</p>
+     </div>
+    </a>
+   `;
+
+   // Function to clear and load content
+   function loadPageContent(page) {
+     mainContent.innerHTML = '';
+
+     if (page === 'home') {
+       mainContent.innerHTML = `
+       <section id="page-home" class="">
+         <a class="block w-full" href="#">
+          <img alt="banner1.png cinza arredondado" class="w-full rounded-3xl object-contain h-20 max-h-20" loading="lazy" src="banner1.png"/>
+         </a>
+         <section class="mt-3.5">
+          <h2 class="font-bold text-xs">Restaurantes</h2>
+          <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">Os itens mais populares do Hubz</h3>
+          <div class="flex gap-2.5 overflow-x-auto no-scrollbar pb-0.5">
+           <a class="flex-shrink-0 w-20 block" href="https://marmitasdobira.netlify.app" rel="noopener noreferrer" target="_blank">
+            <img alt="Rancho do Bira prato de comida caseira com arroz, feijão, carne e salada em fundo rústico" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3539f52b-6b1a-4281-3ed1-4bea3377b9fd.jpg" width="80"/>
+            <div class="flex items-center gap-1 mt-0.5">
+             <div>
+              <p class="text-[8px] font-bold leading-tight">Rancho do Bira</p>
+              <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
+             </div>
+            </div>
+           </a>
+           <a class="flex-shrink-0 w-20 block" href="https://sweetcg.netlify.app" rel="noopener noreferrer" target="_blank">
+            <img alt="Sweet Refeição sobremesa doce com frutas vermelhas e chantilly em prato branco" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/26dfdf9f-8eff-4c31-8ea6-f199c0f81728.jpg" width="80"/>
+            <div class="flex items-center gap-1 mt-0.5">
+             <div>
+              <p class="text-[8px] font-bold leading-tight">Sweet Refeição</p>
+              <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
+             </div>
+            </div>
+           </a>
+           <a class="flex-shrink-0 w-20 block" href="https://geraldoscg.netlify.app" rel="noopener noreferrer" target="_blank">
+            <img alt="Geraldo's Marmitas marmita com arroz, feijão, carne e legumes em embalagem plástica" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/42df357b-8f51-4a93-1c02-be35547d1ce3.jpg" width="80"/>
+            <div class="flex items-center gap-1 mt-0.5">
+             <div>
+              <p class="text-[8px] font-bold leading-tight">Geraldo's Marmitas</p>
+              <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
+             </div>
+            </div>
+           </a>
+           <div class="flex-shrink-0 w-20">
+            <img alt="Strogonof do Rei prato de strogonoff com arroz branco e batata palha em fundo claro" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6706b4c4-12e7-422e-c419-d539a3f85813.jpg" width="80"/>
+            <div class="flex items-center gap-1 mt-0.5">
+             <div>
+              <p class="text-[8px] font-bold leading-tight">Strogonof do Rei</p>
+              <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
+             </div>
+            </div>
+           </div>
+           <div class="flex-shrink-0 w-20">
+            <img alt="Pro Burger hambúrguer artesanal com queijo, alface e tomate em pão brioche" class="w-20 h-20 rounded-3xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/262d184c-291b-4233-b229-176fbcd66e8a.jpg" width="80"/>
+            <div class="flex items-center gap-1 mt-0.5">
+             <div>
+              <p class="text-[8px] font-bold leading-tight">Pro Burger</p>
+              <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
+             </div>
+            </div>
+           </div>
+          </div>
+         </section>
+         <section class="mt-5">
+          <h2 class="font-bold text-xs">Comércio</h2>
+          <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">As camisetas da comunidade</h3>
+          <div class="flex gap-1 overflow-x-auto no-scrollbar pb-0.5">
+           <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+            <a class="w-full" href="#">
+             <img alt="Camisa Fúria camiseta preta com estampa branca e vermelha em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/bca513a6-2208-468f-50bb-e81f1bea7400.jpg" width="96"/>
+            </a>
+            <p class="font-bold mt-0.5 text-center text-[8px]">Camisa Fúria</p>
+            <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+             <span>Ver</span>
+             <span class="font-bold text-[8px]">R$60</span>
+            </button>
+           </div>
+           <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+            <a class="w-full" href="#">
+             <img alt="Hubz UV+ camiseta branca com logo colorido em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a12e30f8-4e03-4b81-278c-a1aced875c8c.jpg" width="96"/>
+            </a>
+            <p class="font-bold mt-0.5 text-center text-[8px]">Hubz UV+</p>
+            <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+             <span>Ver</span>
+             <span class="font-bold text-[8px]">R$60</span>
+            </button>
+           </div>
+           <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+            <a class="w-full" href="#">
+             <img alt="Camisa EFC camiseta azul com estampa branca em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/298fd2c5-d2e5-49d7-4169-7d487ba69ad0.jpg" width="96"/>
+            </a>
+            <p class="font-bold mt-0.5 text-center text-[8px]">Camisa EFC</p>
+            <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+             <span>Ver</span>
+             <span class="font-bold text-[8px]">R$60</span>
+            </button>
+           </div>
+           <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+            <a class="w-full" href="#">
+             <img alt="Hubz + Fúria camiseta preta com logo colorido e estampa vermelha em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/73567ad2-38c6-4097-8a7e-c10bf72ac585.jpg" width="96"/>
+            </a>
+            <p class="font-bold mt-0.5 text-center text-[8px]">Hubz + Fúria</p>
+            <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+             <span>Ver</span>
+             <span class="font-bold text-[8px]">R$60</span>
+            </button>
+           </div>
+           <div class="flex-shrink-0 w-24 bg-white rounded-3xl shadow-md p-1.5 flex flex-col items-center">
+            <a class="w-full" href="#">
+             <img alt="Hubz + EFC camiseta azul com logo colorido e estampa branca em fundo branco" class="w-24 h-16 rounded-3xl object-contain" height="64" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a4a52e2b-6cd1-4160-45c0-983567bcdfcc.jpg" width="96"/>
+            </a>
+            <p class="font-bold mt-0.5 text-center text-[8px]">Hubz + EFC</p>
+            <button class="mt-0.5 w-full rounded-full bg-gradient-to-r from-cyan-700 to-green-500 text-white font-semibold text-[8px] py-0.5 flex justify-between px-2" type="button">
+             <span>Ver</span>
+             <span class="font-bold text-[8px]">R$60</span>
+            </button>
+           </div>
+          </div>
+         </section>
+         <!-- Serviços Section -->
+         <section class="mt-5">
+          <h2 class="font-bold text-xs">
+           Serviços
+          </h2>
+          <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-1.5">
+           Com o Hubz você pode:
+          </h3>
+          <div aria-label="Serviços" class="flex gap-1.5 overflow-x-auto no-scrollbar bg-white rounded-xl p-1.5 shadow-inner">
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+            <img alt="Ícone azul com garfo e faca" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0bb5b235-1831-42ca-6774-e46efc27c5be.jpg" width="36"/>
+            <span class="text-[9px] font-semibold leading-tight">
+             Pedir Refeição
+            </span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+            <img alt="Ícone amarelo com carro" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="carro.png"/>
+            <span class="text-[9px] font-semibold leading-tight">
+             Chamar Carro
+            </span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+            <img alt="Ícone verde com sacola de compras" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b035e17-b8af-44a2-700c-607496b83626.jpg" width="36"/>
+            <span class="text-[9px] font-semibold leading-tight">
+             Fazer Compras
+            </span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+            <img alt="Ícone vermelho com caixa de envio" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c40e179-a039-482e-573a-b307e70492dc.jpg" width="36"/>
+            <span class="text-[9px] font-semibold leading-tight">
+             Enviar Itens
+            </span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-2.5 py-1.5 min-w-[68px] text-center" role="button" tabindex="0">
+            <img alt="Ícone azul com calendário" class="w-9 h-9 mb-0.5 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2773888a-effd-45a1-84c2-09cf61843e30.jpg" width="36"/>
+            <span class="text-[9px] font-semibold leading-tight">
+             Ver Eventos
+            </span>
+           </div>
+          </div>
+         </section>
+         <!-- Grupos do Zap Section -->
+         <section class="mt-5 mb-14">
+          <h2 class="font-bold text-xs">
+           Grupos do Zap
+          </h2>
+          <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-2">
+           Participe dos grupos do WhatsApp da comunidade
+          </h3>
+          <div id="gruposZapContainer" class="flex flex-col gap-3">
+           <a href="https://chat.whatsapp.com/DaHhOoEPsYgK0pYn9QY8hU?mode=r_t" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" aria-label="Grupo Hubz Moto Parts">
+            <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" loading="lazy" src="https://placehold.co/32x32/ffffff/25D366/png/whatsapp-icon"/>
+            <div class="flex flex-col">
+             <span class="font-semibold text-sm">🔧 Hubz Moto Parts</span>
+             <p class="text-xs leading-tight">Grupo para venda, troca de peças, ajuda com motos, socorro e muito mais.</p>
+            </div>
+           </a>
+          </div>
+          <button id="verTodosBtn" class="mt-3 w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-2 rounded-lg transition-colors">
+           Ver todos
+          </button>
+         </section>
+       </section>
+       `;
+     } else {
+       // For other pages, show a blank page with a heading
+       let title = '';
+       switch(page) {
+         case 'transporte': title = 'Transporte'; break;
+         case 'vender': title = 'Vender'; break;
+         case 'entregar': title = 'Entregar'; break;
+         case 'perfil': title = 'Perfil'; break;
+         default: title = '';
+       }
+       mainContent.innerHTML = `
+         <section class="min-h-[60vh] flex items-center justify-center">
+           <h1 class="text-xl font-bold text-gray-700">${title}</h1>
+         </section>
+       `;
+     }
+   }
+
+   navHome.addEventListener('click', () => loadPageContent('home'));
+   navTransporte.addEventListener('click', () => loadPageContent('transporte'));
+   navVender.addEventListener('click', () => loadPageContent('vender'));
+   navEntregar.addEventListener('click', () => loadPageContent('entregar'));
+   navPerfil.addEventListener('click', () => loadPageContent('perfil'));
+
+   verTodosBtn.addEventListener('click', () => {
+     gruposZapContainer.innerHTML = fullGruposZapHTML;
+     verTodosBtn.style.display = 'none';
    });
   </script>
  </body>
