@@ -1,0 +1,713 @@
+<html class="scroll-smooth" lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Lojas
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h3 {
+      letter-spacing: -0.02em;
+    }
+    /* Hide scrollbar for WebKit browsers */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900">
+  <div class="max-w-md mx-auto p-1">
+   <div class="flex gap-1 mb-3 overflow-x-auto no-scrollbar whitespace-nowrap">
+    <button id="filterBtn" class="flex items-center gap-1 bg-gray-100 text-gray-900 text-[9px] rounded-full py-0.5 px-2 whitespace-nowrap flex-shrink-0">
+     Filtrar
+     <i class="fas fa-chevron-down text-[7px]"></i>
+    </button>
+    <button id="freeDeliveryBtn" class="bg-gray-100 text-gray-900 text-[9px] rounded-full py-0.5 px-2 whitespace-nowrap flex-shrink-0">
+     Entrega grátis
+    </button>
+    <button id="neighborhoodBtn" class="flex items-center gap-1 bg-gray-100 text-gray-900 text-[9px] rounded-full py-0.5 px-2 whitespace-nowrap flex-shrink-0">
+     Bairro
+     <i class="fas fa-chevron-down text-[7px]"></i>
+    </button>
+    <button id="cheapestBtn" class="bg-gray-100 text-gray-900 text-[9px] rounded-full py-0.5 px-2 whitespace-nowrap flex-shrink-0">
+     Mais Baratos
+    </button>
+    <button id="couponsBtn" class="bg-gray-100 text-gray-900 text-[9px] rounded-full py-0.5 px-2 whitespace-nowrap flex-shrink-0">
+     Cupons
+    </button>
+   </div>
+   <h2 class="text-sm font-semibold mb-2">
+    Lojas
+   </h2>
+   <ul id="storeList" class="space-y-1.5">
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="0" data-name="Açaí da Pri" data-free-delivery="true" data-neighborhood="Nova Lima" data-has-coupon="false" data-price="25" data-category="Açaí">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado azul com texto branco e rosa Açaí da Pri" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg","https://placehold.co/36x36/4a90e2/ffffff/png?text=A%C3%A7a%C3%AD+2","https://placehold.co/36x36/357ABD/ffffff/png?text=A%C3%A7a%C3%AD+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        AÇAÍ DA PRI
+       </h3>
+       <div class="text-[8px] text-gray-600 mt-0.5 flex flex-wrap gap-1">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Açaí
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-purple-100 text-purple-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-gem text-[7px]"></i>
+        Entrega Super R$5 Off
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="1" data-name="Makako Burguer" data-free-delivery="false" data-neighborhood="Nova Lima" data-has-coupon="true" data-price="30" data-category="Hambúrguer">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado preto com imagem de macaco e texto Makako Burguer" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/9c4b5f18-77a9-4dd7-0a4c-e554abe24859.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/9c4b5f18-77a9-4dd7-0a4c-e554abe24859.jpg","https://placehold.co/36x36/000000/ffffff/png?text=Makako+2","https://placehold.co/36x36/222222/ffffff/png?text=Makako+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Makako Burguer
+       </h3>
+       <div class="text-[8px] mt-0.5 flex flex-wrap gap-1 text-gray-600">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Hambúrguer
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-tag text-[7px]"></i>
+        Cupom de R$ 5 disponível
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="2" data-name="Sg Conveniência Lanches" data-free-delivery="false" data-neighborhood="Nova Lima" data-has-coupon="false" data-price="20" data-category="Lanches">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado com imagem de sanduíche e texto Sg Conveniência Lanches" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/09303539-52f0-45c0-7af6-35c64c60dbfc.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/09303539-52f0-45c0-7af6-35c64c60dbfc.jpg","https://placehold.co/36x36/8B4513/ffffff/png?text=Sg+2","https://placehold.co/36x36/A0522D/ffffff/png?text=Sg+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Sg Conveniência Lanches
+       </h3>
+       <div class="text-[8px] mt-0.5 flex flex-wrap gap-1 text-gray-600">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Lanches
+        </span>
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="3" data-name="Claudete Batatas" data-free-delivery="true" data-neighborhood="Nova Lima" data-has-coupon="false" data-price="35" data-category="Brasileira">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado amarelo com desenho de cozinheiro e texto Claudete Batatas" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/e5b63b3e-163e-4ee6-28d2-1d185641d9cf.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/e5b63b3e-163e-4ee6-28d2-1d185641d9cf.jpg","https://placehold.co/36x36/FFD700/000000/png?text=Claudete+2","https://placehold.co/36x36/FFC107/000000/png?text=Claudete+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Claudete Batatas
+       </h3>
+       <div class="text-[8px] text-gray-600 mt-0.5 flex flex-wrap gap-1">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Brasileira
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-motorcycle text-[7px]"></i>
+        Grátis a partir de R$ 45
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="4" data-name="Açaí da Pri" data-free-delivery="false" data-neighborhood="Nova Lima" data-has-coupon="false" data-price="25" data-category="Brasileira">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado azul com texto branco e rosa Açaí da Pri" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg","https://placehold.co/36x36/4a90e2/ffffff/png?text=A%C3%A7a%C3%AD+2","https://placehold.co/36x36/357ABD/ffffff/png?text=A%C3%A7a%C3%AD+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Açaí da Pri
+       </h3>
+       <div class="text-[8px] mt-0.5 flex flex-wrap gap-1 text-gray-600">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Brasileira
+        </span>
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="5" data-name="Pizzaria Aguirre" data-free-delivery="false" data-neighborhood="Nova Lima" data-has-coupon="true" data-price="40" data-category="Pizza">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado preto com brasão e texto Pizzaria Aguirre" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/fc9c36d6-e0f5-491b-5619-3a0f770015d3.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/fc9c36d6-e0f5-491b-5619-3a0f770015d3.jpg","https://placehold.co/36x36/000000/ffffff/png?text=Pizzaria+2","https://placehold.co/36x36/222222/ffffff/png?text=Pizzaria+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Pizzaria Aguirre
+       </h3>
+       <div class="text-[8px] mt-0.5 flex flex-wrap gap-1 text-gray-600">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Pizza
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-tag text-[7px]"></i>
+        Cupom de R$ 12 disponível
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="6" data-name="Açaí do Éty" data-free-delivery="true" data-neighborhood="Nova Lima" data-has-coupon="false" data-price="28" data-category="Açaí">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado amarelo com texto roxo Açaí do Éty" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/1f59e4b5-358c-4077-1344-821e64bef332.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/1f59e4b5-358c-4077-1344-821e64bef332.jpg","https://placehold.co/36x36/FFD700/000000/png?text=A%C3%A7a%C3%AD+do+Ety+2","https://placehold.co/36x36/FFC107/000000/png?text=A%C3%A7a%C3%AD+do+Ety+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Açaí do Éty
+       </h3>
+       <div class="text-[8px] mt-0.5 flex flex-wrap gap-1 text-gray-600">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Açaí
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-purple-100 text-purple-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-gem text-[7px]"></i>
+        Entrega Super R$5 Off
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="7" data-name="Mada Sushi Lounge" data-free-delivery="true" data-neighborhood="Nova Lima" data-has-coupon="false" data-price="50" data-category="Japonesa">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado preto com texto vermelho Mada Sushi Lounge" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/39ff16cc-7fb8-4269-1c53-1234046f3d1f.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/39ff16cc-7fb8-4269-1c53-1234046f3d1f.jpg","https://placehold.co/36x36/000000/ffffff/png?text=Mada+2","https://placehold.co/36x36/222222/ffffff/png?text=Mada+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Mada Sushi Lounge
+       </h3>
+       <div class="text-[8px] mt-0.5 flex flex-wrap gap-1 text-gray-600">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Japonesa
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-motorcycle text-[7px]"></i>
+        Grátis a partir de R$ 45
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="8" data-name="Papys Dogueria" data-free-delivery="true" data-neighborhood="Nova Lima" data-has-coupon="false" data-price="22" data-category="Açaí">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado branco com texto colorido Papys Dogueria, Açaí e Pastel" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/1216e974-5bc8-496c-f5fe-f311ed9186e5.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/1216e974-5bc8-496c-f5fe-f311ed9186e5.jpg","https://placehold.co/36x36/FFFFFF/000000/png?text=Papys+2","https://placehold.co/36x36/EEEEEE/000000/png?text=Papys+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Papys Dogueria, Açaí e Pastel
+       </h3>
+       <div class="text-[8px] text-gray-600 mt-0.5 flex flex-wrap gap-1">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Açaí
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-shipping-fast text-[7px]"></i>
+        Entrega grátis a partir de R$ 60
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+    <li class="flex justify-between items-center bg-gray-50 rounded-lg p-2" data-index="9" data-name="Cia do Lanche" data-free-delivery="false" data-neighborhood="Nova Lima" data-has-coupon="true" data-price="27" data-category="Variada">
+     <div class="flex gap-2.5 items-center">
+      <img alt="Logo quadrado preto com texto amarelo Cia do Lanche" class="w-9 h-9 rounded-lg flex-shrink-0 store-img" height="36" src="https://storage.googleapis.com/a1aa/image/7c0cc2c6-eb56-46b5-a4e6-8395d1a4835f.jpg" width="36" data-images='["https://storage.googleapis.com/a1aa/image/7c0cc2c6-eb56-46b5-a4e6-8395d1a4835f.jpg","https://placehold.co/36x36/000000/FFD700/png?text=Cia+2","https://placehold.co/36x36/222222/FFC107/png?text=Cia+3"]'/>
+      <div class="flex flex-col">
+       <h3 class="font-semibold text-[11px] leading-tight">
+        Cia do Lanche
+       </h3>
+       <div class="text-[8px] mt-0.5 flex flex-wrap gap-1 text-gray-600">
+        <span>
+         Nova Lima
+        </span>
+        <span class="text-gray-400 select-none">
+         •
+        </span>
+        <span>
+         Variada
+        </span>
+       </div>
+       <div class="mt-1 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[8px] rounded-full py-0.5 px-2">
+        <i class="fas fa-tag text-[7px]"></i>
+        Cupom de R$ 5 disponível
+       </div>
+      </div>
+     </div>
+     <button class="text-purple-700 text-[8px] font-semibold rounded-full border border-purple-700 py-0.5 px-2 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
+      Ver loja
+     </button>
+    </li>
+   </ul>
+  </div>
+
+  <!-- Modal for Bairro selection -->
+  <div id="neighborhoodModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+   <div class="bg-white rounded-lg max-w-xs w-full p-4">
+    <h3 class="text-sm font-semibold mb-2">Selecione o Bairro</h3>
+    <select id="neighborhoodSelect" class="w-full border border-gray-300 rounded px-2 py-1 text-sm mb-4">
+     <option value="">Todos</option>
+     <option value="Nova Lima">Nova Lima</option>
+    </select>
+    <div class="flex justify-end gap-2">
+     <button id="neighborhoodCancel" class="px-3 py-1 text-sm rounded bg-gray-200 hover:bg-gray-300">Cancelar</button>
+     <button id="neighborhoodApply" class="px-3 py-1 text-sm rounded bg-purple-700 text-white hover:bg-purple-800">Aplicar</button>
+    </div>
+   </div>
+  </div>
+
+  <!-- Modal for Filter selection -->
+  <div id="filterModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+   <div class="bg-white rounded-lg max-w-xs w-full p-4">
+    <h3 class="text-sm font-semibold mb-3">Filtros</h3>
+    <form id="filterForm" class="space-y-3 text-sm">
+     <label class="flex items-center gap-2">
+      <input type="checkbox" name="freeDelivery" id="filterFreeDelivery" />
+      Entrega grátis
+     </label>
+     <label class="flex items-center gap-2">
+      Bairro:
+      <select name="neighborhood" id="filterNeighborhood" class="border border-gray-300 rounded px-2 py-1 ml-2 flex-grow">
+       <option value="">Todos</option>
+       <option value="Nova Lima">Nova Lima</option>
+      </select>
+     </label>
+     <label class="flex items-center gap-2">
+      <input type="checkbox" name="hasCoupon" id="filterHasCoupon" />
+      Cupons disponíveis
+     </label>
+    </form>
+    <div class="flex justify-end gap-2 mt-4">
+     <button id="filterCancel" class="px-3 py-1 text-sm rounded bg-gray-200 hover:bg-gray-300">Cancelar</button>
+     <button id="filterApply" class="px-3 py-1 text-sm rounded bg-purple-700 text-white hover:bg-purple-800">Aplicar</button>
+    </div>
+   </div>
+  </div>
+
+  <script>
+   (() => {
+    const stores = document.querySelectorAll('.store-img');
+    const totalImages = 3;
+    const intervalTime = 3000;
+    const pauseTime = 3000;
+    const groupSize = 3;
+    let currentGroupIndex = 0;
+    let currentImageIndex = 0;
+    let phase = 'cycle';
+    let timeoutId;
+
+    const storeGroups = [];
+    for (let i = 0; i < stores.length; i += groupSize) {
+      storeGroups.push(Array.from(stores).slice(i, i + groupSize));
+    }
+
+    function showImage(store, imgIndex) {
+      const images = JSON.parse(store.dataset.images);
+      store.src = images[imgIndex];
+    }
+
+    function nextStep() {
+      if (phase === 'cycle') {
+        currentImageIndex++;
+        if (currentImageIndex >= totalImages) {
+          currentImageIndex = 0;
+          phase = 'pause';
+          storeGroups[currentGroupIndex].forEach(store => showImage(store, currentImageIndex));
+          timeoutId = setTimeout(nextStep, pauseTime);
+          return;
+        } else {
+          storeGroups[currentGroupIndex].forEach(store => showImage(store, currentImageIndex));
+          timeoutId = setTimeout(nextStep, intervalTime);
+          return;
+        }
+      } else if (phase === 'pause') {
+        currentGroupIndex++;
+        if (currentGroupIndex >= storeGroups.length) {
+          currentGroupIndex = 0;
+        }
+        currentImageIndex = 0;
+        phase = 'cycle';
+        storeGroups[currentGroupIndex].forEach(store => showImage(store, currentImageIndex));
+        timeoutId = setTimeout(nextStep, intervalTime);
+      }
+    }
+
+    stores.forEach(store => {
+      showImage(store, 0);
+    });
+
+    timeoutId = setTimeout(nextStep, intervalTime);
+
+    window.addEventListener('beforeunload', () => {
+      clearTimeout(timeoutId);
+    });
+
+    // Filtering logic
+    const freeDeliveryBtn = document.getElementById('freeDeliveryBtn');
+    const neighborhoodBtn = document.getElementById('neighborhoodBtn');
+    const cheapestBtn = document.getElementById('cheapestBtn');
+    const couponsBtn = document.getElementById('couponsBtn');
+    const filterBtn = document.getElementById('filterBtn');
+
+    const neighborhoodModal = document.getElementById('neighborhoodModal');
+    const neighborhoodSelect = document.getElementById('neighborhoodSelect');
+    const neighborhoodCancel = document.getElementById('neighborhoodCancel');
+    const neighborhoodApply = document.getElementById('neighborhoodApply');
+
+    const filterModal = document.getElementById('filterModal');
+    const filterForm = document.getElementById('filterForm');
+    const filterCancel = document.getElementById('filterCancel');
+    const filterApply = document.getElementById('filterApply');
+
+    const storeList = document.getElementById('storeList');
+
+    // State for filters
+    let filters = {
+      freeDelivery: false,
+      neighborhood: '',
+      hasCoupon: false,
+      cheapest: false,
+      filterMode: false // true when filter modal is active
+    };
+
+    // Special sets for free delivery and coupons per user request
+    const freeDeliveryNames = new Set([
+      "Açaí da Pri",
+      "Claudete Batatas",
+      "Açaí do Éty",
+      "Mada Sushi Lounge",
+      "Papys Dogueria"
+    ]);
+    const couponsNames = new Set([
+      "Makako Burguer",
+      "Pizzaria Aguirre",
+      "Cia do Lanche"
+    ]);
+
+    // Utility: show/hide stores based on filters
+    function applyFilters() {
+      let items = Array.from(storeList.children);
+
+      // Filter by free delivery
+      if (filters.freeDelivery) {
+        items = items.filter(item => freeDeliveryNames.has(item.dataset.name));
+      }
+
+      // Filter by neighborhood
+      if (filters.neighborhood && filters.neighborhood !== '') {
+        items = items.filter(item => item.dataset.neighborhood === filters.neighborhood);
+      }
+
+      // Filter by coupon
+      if (filters.hasCoupon) {
+        items = items.filter(item => couponsNames.has(item.dataset.name));
+      }
+
+      // Clear list
+      storeList.innerHTML = '';
+
+      // Sort by price if cheapest filter active
+      if (filters.cheapest) {
+        items.sort((a, b) => {
+          const priceA = parseFloat(a.dataset.price) || 0;
+          const priceB = parseFloat(b.dataset.price) || 0;
+          return priceA - priceB;
+        });
+      } else {
+        // Sort by original data-index ascending to keep original order
+        items.sort((a, b) => {
+          return parseInt(a.dataset.index) - parseInt(b.dataset.index);
+        });
+      }
+
+      // Append filtered and sorted items
+      items.forEach(item => storeList.appendChild(item));
+    }
+
+    // Toggle button active state helper
+    function toggleButtonActive(button, active) {
+      if (active) {
+        button.classList.add('bg-purple-700', 'text-white');
+        button.classList.remove('bg-gray-100', 'text-gray-900');
+      } else {
+        button.classList.remove('bg-purple-700', 'text-white');
+        button.classList.add('bg-gray-100', 'text-gray-900');
+      }
+    }
+
+    // Reset all filters and buttons to default (show all)
+    function resetFilters() {
+      filters.freeDelivery = false;
+      filters.neighborhood = '';
+      filters.hasCoupon = false;
+      filters.cheapest = false;
+      filters.filterMode = false;
+
+      toggleButtonActive(freeDeliveryBtn, false);
+      toggleButtonActive(neighborhoodBtn, false);
+      toggleButtonActive(couponsBtn, false);
+      toggleButtonActive(cheapestBtn, false);
+
+      applyFilters();
+    }
+
+    // Free Delivery button click
+    freeDeliveryBtn.addEventListener('click', () => {
+      if(filters.filterMode) return;
+
+      if(filters.freeDelivery) {
+        // If already active, reset filters (show all)
+        resetFilters();
+      } else {
+        filters.freeDelivery = true;
+        toggleButtonActive(freeDeliveryBtn, true);
+
+        // Reset other filters
+        filters.neighborhood = '';
+        toggleButtonActive(neighborhoodBtn, false);
+        filters.hasCoupon = false;
+        toggleButtonActive(couponsBtn, false);
+        filters.cheapest = false;
+        toggleButtonActive(cheapestBtn, false);
+
+        applyFilters();
+      }
+    });
+
+    // Neighborhood button click - open modal
+    neighborhoodBtn.addEventListener('click', () => {
+      if(filters.filterMode) return;
+      neighborhoodSelect.value = filters.neighborhood || '';
+      neighborhoodModal.classList.remove('hidden');
+    });
+
+    neighborhoodCancel.addEventListener('click', () => {
+      neighborhoodModal.classList.add('hidden');
+    });
+
+    neighborhoodApply.addEventListener('click', () => {
+      const selected = neighborhoodSelect.value;
+      neighborhoodModal.classList.add('hidden');
+
+      if(selected === filters.neighborhood) {
+        // Same selection, do nothing
+        return;
+      }
+
+      if(selected === '') {
+        // Reset filters if empty selected
+        resetFilters();
+        return;
+      }
+
+      filters.neighborhood = selected;
+      toggleButtonActive(neighborhoodBtn, true);
+
+      // Reset other filters
+      filters.freeDelivery = false;
+      toggleButtonActive(freeDeliveryBtn, false);
+      filters.hasCoupon = false;
+      toggleButtonActive(couponsBtn, false);
+      filters.cheapest = false;
+      toggleButtonActive(cheapestBtn, false);
+
+      applyFilters();
+    });
+
+    // Cheapest button click
+    cheapestBtn.addEventListener('click', () => {
+      if(filters.filterMode) return;
+
+      if(filters.cheapest) {
+        resetFilters();
+      } else {
+        filters.cheapest = true;
+        toggleButtonActive(cheapestBtn, true);
+
+        filters.freeDelivery = false;
+        toggleButtonActive(freeDeliveryBtn, false);
+        filters.neighborhood = '';
+        toggleButtonActive(neighborhoodBtn, false);
+        filters.hasCoupon = false;
+        toggleButtonActive(couponsBtn, false);
+
+        applyFilters();
+      }
+    });
+
+    // Coupons button click
+    couponsBtn.addEventListener('click', () => {
+      if(filters.filterMode) return;
+
+      if(filters.hasCoupon) {
+        resetFilters();
+      } else {
+        filters.hasCoupon = true;
+        toggleButtonActive(couponsBtn, true);
+
+        filters.freeDelivery = false;
+        toggleButtonActive(freeDeliveryBtn, false);
+        filters.neighborhood = '';
+        toggleButtonActive(neighborhoodBtn, false);
+        filters.cheapest = false;
+        toggleButtonActive(cheapestBtn, false);
+
+        applyFilters();
+      }
+    });
+
+    // Filter button click - open filter modal
+    filterBtn.addEventListener('click', () => {
+      filters.filterMode = true;
+      filterForm.freeDelivery.checked = filters.freeDelivery;
+      filterForm.neighborhood.value = filters.neighborhood || '';
+      filterForm.hasCoupon.checked = filters.hasCoupon;
+      filterModal.classList.remove('hidden');
+
+      freeDeliveryBtn.disabled = true;
+      neighborhoodBtn.disabled = true;
+      cheapestBtn.disabled = true;
+      couponsBtn.disabled = true;
+      freeDeliveryBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      neighborhoodBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      cheapestBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      couponsBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    });
+
+    filterCancel.addEventListener('click', () => {
+      filterModal.classList.add('hidden');
+      filters.filterMode = false;
+
+      freeDeliveryBtn.disabled = false;
+      neighborhoodBtn.disabled = false;
+      cheapestBtn.disabled = false;
+      couponsBtn.disabled = false;
+      freeDeliveryBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      neighborhoodBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      cheapestBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      couponsBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    });
+
+    filterApply.addEventListener('click', () => {
+      filters.freeDelivery = filterForm.freeDelivery.checked;
+      filters.neighborhood = filterForm.neighborhood.value;
+      filters.hasCoupon = filterForm.hasCoupon.checked;
+
+      filterModal.classList.add('hidden');
+      filters.filterMode = false;
+
+      toggleButtonActive(freeDeliveryBtn, filters.freeDelivery);
+      toggleButtonActive(neighborhoodBtn, filters.neighborhood !== '');
+      toggleButtonActive(couponsBtn, filters.hasCoupon);
+
+      filters.cheapest = false;
+      toggleButtonActive(cheapestBtn, false);
+
+      freeDeliveryBtn.disabled = false;
+      neighborhoodBtn.disabled = false;
+      cheapestBtn.disabled = false;
+      couponsBtn.disabled = false;
+      freeDeliveryBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      neighborhoodBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      cheapestBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      couponsBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+
+      applyFilters();
+    });
+
+    // Initialize buttons states
+    toggleButtonActive(freeDeliveryBtn, filters.freeDelivery);
+    toggleButtonActive(neighborhoodBtn, filters.neighborhood !== '');
+    toggleButtonActive(couponsBtn, filters.hasCoupon);
+    toggleButtonActive(cheapestBtn, filters.cheapest);
+
+    applyFilters();
+   })();
+  </script>
+ </body>
+</html>
