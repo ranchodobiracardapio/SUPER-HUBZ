@@ -5,7 +5,8 @@
   <title>
    Hubz
   </title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <style>
@@ -25,13 +26,17 @@
  </head>
  <body class="bg-white text-black relative overflow-x-hidden flex flex-col min-h-screen">
   <!-- Sidebar Overlay -->
-  <div class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" id="sidebarOverlay" tabindex="-1"></div>
+  <div class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" id="sidebarOverlay" tabindex="-1">
+  </div>
   <!-- Sidebar -->
   <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 flex flex-col" id="sidebar">
    <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-    <h2 class="font-bold text-lg">Menu</h2>
+    <h2 class="font-bold text-lg">
+     Menu
+    </h2>
     <button aria-label="Fechar menu" class="text-gray-600 hover:text-gray-900 focus:outline-none" id="closeSidebar">
-     <i class="fas fa-times text-xl"></i>
+     <i class="fas fa-times text-xl">
+     </i>
     </button>
    </div>
    <nav class="flex flex-col gap-2 p-4 overflow-y-auto no-scrollbar flex-grow text-sm">
@@ -90,56 +95,56 @@
   <div class="flex-grow overflow-auto pb-20" id="appContent">
    <!-- Top bar with gradient and categories -->
    <header class="pt-2 pb-1 px-3 rounded-b-3xl" style="background: linear-gradient(90deg, #FF3B30 0%, #FF8C52 100%)">
-    <nav aria-label="Categorias" class="mt-1 flex gap-1 overflow-x-auto no-scrollbar px-2 items-center text-xs">
+    <nav aria-label="Categorias" class="mt-1 flex gap-1 overflow-x-auto no-scrollbar px-2 items-center text-[10px]">
      <button aria-label="Abrir menu lateral" class="flex-shrink-0 focus:outline-none" id="profileIconBtn">
-      <img alt="Imagem quadrada de perfil com bordas arredondadas" class="w-7 h-7 rounded-lg object-cover" loading="lazy" src="menu.png"/>
+      <img alt="Imagem quadrada de perfil com bordas arredondadas" class="w-6 h-6 rounded-lg object-cover" loading="lazy" src="menu.png"/>
      </button>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone comércios branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="comercio.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone comércios branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="comercio.png"/>
       Comércios
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone restaurantes branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="restaurantes.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone restaurantes branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="restaurantes.png"/>
       Restaurantes
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone farmácias branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="farmacia.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone farmácias branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="farmacia.png"/>
       Farmácias
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone mercados branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="mercado.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone mercados branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="mercado.png"/>
       Mercados
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone promoções branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="promocao.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone promoções branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="promocao.png"/>
       Promoções
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone conveniências branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="conve.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone conveniências branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="conve.png"/>
       Conveniências
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone eletrônicos branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="eletronicos.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone eletrônicos branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="eletronicos.png"/>
       Eletrônicos
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone reformas branco redondo" class="w-5 h-5 rounded-full object-contain" height="20" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dd6cb9d0-1746-4df1-fa9d-df8e4b50ad04.jpg" width="20"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone reformas branco redondo" class="w-4 h-4 rounded-full object-contain" height="20" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dd6cb9d0-1746-4df1-fa9d-df8e4b50ad04.jpg" width="20"/>
       Reformas
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone casa e jardim branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="Casajar.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone casa e jardim branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="Casajar.png"/>
       Casa e Jardim
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone vestuário branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="vestuario.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone vestuário branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="vestuario.png"/>
       Vestuário
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone atacadistas branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="atacado.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone atacadistas branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="atacado.png"/>
       Atacadistas
      </a>
-     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-1 whitespace-nowrap font-bold text-black text-xs" href="#">
-      <img alt="Ícone boa troca branco redondo" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="troca.png"/>
+     <a class="flex items-center gap-1 flex-shrink-0 bg-white bg-opacity-80 rounded-full px-2 py-0.5 whitespace-nowrap font-bold text-black text-[10px]" href="#">
+      <img alt="Ícone boa troca branco redondo" class="w-4 h-4 rounded-full object-contain" loading="lazy" src="troca.png"/>
       Boa Troca
      </a>
     </nav>
@@ -151,7 +156,7 @@
      <a class="block w-full" href="#">
       <img alt="banner1.png cinza arredondado" class="w-full rounded-3xl object-contain h-20 max-h-20" loading="lazy" src="banner1.png"/>
      </a>
-     <!-- Restaurantes Section -->
+     <!-- Restaurantes Section Compact Cards -->
      <section class="mt-4">
       <h2 class="font-bold text-sm">
        Restaurantes
@@ -159,75 +164,65 @@
       <h3 class="font-semibold text-gray-600 text-sm -mt-1 mb-2">
        Os itens mais populares do Hubz
       </h3>
-      <div class="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-       <a class="flex-shrink-0 w-24 block" href="https://marmitasdobira.netlify.app" rel="noopener noreferrer" target="_blank">
-        <img alt="Rancho do Bira prato de comida caseira com arroz, feijão, carne e salada em fundo rústico" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3539f52b-6b1a-4281-3ed1-4bea3377b9fd.jpg" width="96"/>
-        <div class="flex items-center gap-1 mt-1">
-         <div>
-          <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">
-           Rancho do Bira
-          </p>
-          <p class="text-sm text-gray-500 leading-tight">
-           45 min
-          </p>
-         </div>
+      <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+       <a class="flex-shrink-0 w-20 block" href="https://marmitasdobira.netlify.app" rel="noopener noreferrer" target="_blank">
+        <img alt="Rancho do Bira prato de comida caseira com arroz, feijão, carne e salada em fundo rústico" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3539f52b-6b1a-4281-3ed1-4bea3377b9fd.jpg" width="80"/>
+        <div class="mt-1">
+         <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">
+          Rancho do Bira
+         </p>
+         <p class="text-[9px] text-gray-500 leading-tight">
+          45 min
+         </p>
         </div>
        </a>
-       <a class="flex-shrink-0 w-24 block" href="https://sweetcg.netlify.app" rel="noopener noreferrer" target="_blank">
-        <img alt="Sweet Refeição sobremesa doce com frutas vermelhas e chantilly em prato branco" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/26dfdf9f-8eff-4c31-8ea6-f199c0f81728.jpg" width="96"/>
-        <div class="flex items-center gap-1 mt-1">
-         <div>
-          <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">
-           Sweet Refeição
-          </p>
-          <p class="text-sm text-gray-500 leading-tight">
-           45 min
-          </p>
-         </div>
+       <a class="flex-shrink-0 w-20 block" href="https://sweetcg.netlify.app" rel="noopener noreferrer" target="_blank">
+        <img alt="Sweet Refeição sobremesa doce com frutas vermelhas e chantilly em prato branco" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/26dfdf9f-8eff-4c31-8ea6-f199c0f81728.jpg" width="80"/>
+        <div class="mt-1">
+         <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">
+          Sweet Refeição
+         </p>
+         <p class="text-[9px] text-gray-500 leading-tight">
+          45 min
+         </p>
         </div>
        </a>
-       <a class="flex-shrink-0 w-24 block" href="https://geraldoscg.netlify.app" rel="noopener noreferrer" target="_blank">
-        <img alt="Geraldo's Marmitas marmita com arroz, feijão, carne e legumes em embalagem plástica" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/42df357b-8f51-4a93-1c02-be35547d1ce3.jpg" width="96"/>
-        <div class="flex items-center gap-1 mt-1">
-         <div>
-          <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">
-           Geraldo's Marmitas
-          </p>
-          <p class="text-sm text-gray-500 leading-tight">
-           45 min
-          </p>
-         </div>
+       <a class="flex-shrink-0 w-20 block" href="https://geraldoscg.netlify.app" rel="noopener noreferrer" target="_blank">
+        <img alt="Geraldo's Marmitas marmita com arroz, feijão, carne e legumes em embalagem plástica" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/42df357b-8f51-4a93-1c02-be35547d1ce3.jpg" width="80"/>
+        <div class="mt-1">
+         <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">
+          Geraldo's Marmitas
+         </p>
+         <p class="text-[9px] text-gray-500 leading-tight">
+          45 min
+         </p>
         </div>
        </a>
-       <div class="flex-shrink-0 w-24">
-        <img alt="Strogonof do Rei prato de strogonoff com arroz branco e batata palha em fundo claro" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6706b4c4-12e7-422e-c419-d539a3f85813.jpg" width="96"/>
-        <div class="flex items-center gap-1 mt-1">
-         <div>
-          <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">
-           Strogonof do Rei
-          </p>
-          <p class="text-sm text-gray-500 leading-tight">
-           45 min
-          </p>
-         </div>
+       <a class="flex-shrink-0 w-20 block" href="#">
+        <img alt="Strogonof do Rei prato de strogonoff com arroz branco e batata palha em fundo claro" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6706b4c4-12e7-422e-c419-d539a3f85813.jpg" width="80"/>
+        <div class="mt-1">
+         <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">
+          Strogonof do Rei
+         </p>
+         <p class="text-[9px] text-gray-500 leading-tight">
+          45 min
+         </p>
         </div>
-       </div>
-       <div class="flex-shrink-0 w-24">
-        <img alt="Pro Burger hambúrguer artesanal com queijo, alface e tomate em pão brioche" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/262d184c-291b-4233-b229-176fbcd66e8a.jpg" width="96"/>
-        <div class="flex items-center gap-1 mt-1">
-         <div>
-          <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">
-           Pro Burger
-          </p>
-          <p class="text-sm text-gray-500 leading-tight">
-           45 min
-          </p>
-         </div>
+       </a>
+       <a class="flex-shrink-0 w-20 block" href="#">
+        <img alt="Pro Burger hambúrguer artesanal com queijo, alface e tomate em pão brioche" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/262d184c-291b-4233-b229-176fbcd66e8a.jpg" width="80"/>
+        <div class="mt-1">
+         <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">
+          Pro Burger
+         </p>
+         <p class="text-[9px] text-gray-500 leading-tight">
+          45 min
+         </p>
         </div>
-       </div>
+       </a>
       </div>
      </section>
-     <!-- Serviços Section -->
+     <!-- Serviços Section Expanded -->
      <section class="mt-5">
       <h2 class="font-bold text-sm">
        Serviços
@@ -235,35 +230,95 @@
       <h3 class="font-semibold text-gray-600 text-sm -mt-1 mb-2">
        Com o Hubz você pode:
       </h3>
-      <div aria-label="Serviços" class="flex gap-3 overflow-x-auto no-scrollbar bg-white rounded-xl p-3 shadow-inner">
-       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[80px] text-center" role="button" tabindex="0">
-        <img alt="Ícone azul com garfo e faca" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0bb5b235-1831-42ca-6774-e46efc27c5be.jpg" width="36"/>
-        <span class="text-[12px] font-semibold leading-tight">
+      <div aria-label="Serviços" class="flex gap-2 overflow-x-auto no-scrollbar bg-white rounded-xl p-2 shadow-inner">
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone azul com garfo e faca" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0bb5b235-1831-42ca-6774-e46efc27c5be.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
          Pedir Refeição
         </span>
        </div>
-       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-        <img alt="Ícone amarelo com carro" class="w-11 h-11 mb-1 object-contain" loading="lazy" src="carro.png"/>
-        <span class="text-[12px] font-semibold leading-tight">
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone amarelo com carro" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="carro.png"/>
+        <span class="text-[10px] font-semibold leading-tight">
          Chamar Carro
         </span>
        </div>
-       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-        <img alt="Ícone verde com sacola de compras" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b035e17-b8af-44a2-700c-607496b83626.jpg" width="36"/>
-        <span class="text-[12px] font-semibold leading-tight">
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone verde com sacola de compras" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b035e17-b8af-44a2-700c-607496b83626.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
          Fazer Compras
         </span>
        </div>
-       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-        <img alt="Ícone vermelho com caixa de envio" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c40e179-a039-482e-573a-b307e70492dc.jpg" width="36"/>
-        <span class="text-[12px] font-semibold leading-tight">
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone vermelho com caixa de envio" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c40e179-a039-482e-573a-b307e70492dc.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
          Enviar Itens
         </span>
        </div>
-       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-        <img alt="Ícone azul com calendário" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2773888a-effd-45a1-84c2-09cf61843e30.jpg" width="36"/>
-        <span class="text-[12px] font-semibold leading-tight">
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone azul com calendário" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2773888a-effd-45a1-84c2-09cf61843e30.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
          Ver Eventos
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone caminhão azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6dcf5fed-fa1f-448b-c0d0-ca4bf3185286.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Chamar Frete Caminhão
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone entregador com carro verde" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/635e4f96-6f79-4d16-7e44-fbb7459da2d0.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Entregador com carro
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone entregador moto azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/034abcc6-507c-48e6-8ea1-1c9b92836e94.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Chamar Entregador Moto
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone entregador free lance amarelo" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fc94a426-7a63-4fda-3ea0-44cec99e13d8.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Entregador Free Lance
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone pedreiro com capacete" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b459461e-5e1c-4ec9-b564-2377a5935bd6.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Solicitar um pedreiro
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone pintor com pincel" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3cee6eb1-ce7d-4d3c-dafd-39c76e643fe2.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Chamar Pintor
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone eletricista com lâmpada" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c150bef4-a704-4b2b-fa2e-32a2f9984c80.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Chamar eletricista
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone homem com chapéu e bigode" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/82467bdf-ed0e-4855-e2a0-628948ef76b7.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Chamar o Severino
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone cozinheiro com chapéu branco" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b35626f7-1d1e-4cc2-1d21-acad3a5d336d.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Chamar Cozinheiros
+        </span>
+       </div>
+       <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+        <img alt="Ícone limpeza de piscina azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/446b353f-1547-46e3-cc03-5adbaf144876.jpg" width="32"/>
+        <span class="text-[10px] font-semibold leading-tight">
+         Limpeza na Piscina
         </span>
        </div>
       </div>
@@ -397,14 +452,16 @@
        <div class="flex gap-3 mb-4 overflow-x-auto no-scrollbar whitespace-nowrap px-1">
         <button class="flex items-center gap-2 bg-gray-100 text-gray-900 text-[12px] rounded-full py-2 px-5 whitespace-nowrap flex-shrink-0 font-semibold hover:bg-purple-100 transition" id="filterBtn">
          Filtrar
-         <i class="fas fa-chevron-down text-[10px]"></i>
+         <i class="fas fa-chevron-down text-[10px]">
+         </i>
         </button>
         <button class="bg-gray-100 text-gray-900 text-[12px] rounded-full py-2 px-5 whitespace-nowrap flex-shrink-0 font-semibold hover:bg-purple-100 transition" id="freeDeliveryBtn">
          Entrega grátis
         </button>
         <button class="flex items-center gap-2 bg-gray-100 text-gray-900 text-[12px] rounded-full py-2 px-5 whitespace-nowrap flex-shrink-0 font-semibold hover:bg-purple-100 transition" id="neighborhoodBtn">
          Bairro
-         <i class="fas fa-chevron-down text-[10px]"></i>
+         <i class="fas fa-chevron-down text-[10px]">
+         </i>
         </button>
         <button class="bg-gray-100 text-gray-900 text-[12px] rounded-full py-2 px-5 whitespace-nowrap flex-shrink-0 font-semibold hover:bg-purple-100 transition" id="cheapestBtn">
          Mais Baratos
@@ -418,7 +475,7 @@
          <div class="flex gap-4 items-center">
           <img alt="Logo quadrado azul com texto branco e rosa Açaí da Pri" class="w-12 h-12 rounded-lg flex-shrink-0 store-img" data-images='["https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg","https://placehold.co/48x48/4a90e2/ffffff/png?text=A%C3%A7a%C3%AD+2","https://placehold.co/48x48/357ABD/ffffff/png?text=A%C3%A7a%C3%AD+3"]' height="48" src="https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg" width="48"/>
           <div class="flex flex-col">
-           <h3 class="font-semibold text-sm leading-tight truncate max-w-[6rem]">
+           <h3 class="font-semibold text-sm leading-tight truncate max-w-[5.5rem]">
             Rancho do Bira
            </h3>
            <div class="text-[10px] text-gray-600 mt-1 flex flex-wrap gap-2">
@@ -433,7 +490,8 @@
             </span>
            </div>
            <div class="mt-2 inline-flex items-center gap-1 bg-purple-100 text-purple-700 text-[10px] rounded-full py-1 px-3 font-semibold">
-            <i class="fas fa-gem text-[9px]"></i>
+            <i class="fas fa-gem text-[9px]">
+            </i>
             Entrega Super R$5 Off
            </div>
           </div>
@@ -446,7 +504,7 @@
          <div class="flex gap-4 items-center">
           <img alt="Logo quadrado preto com imagem de macaco e texto Makako Burguer" class="w-12 h-12 rounded-lg flex-shrink-0 store-img" data-images='["https://storage.googleapis.com/a1aa/image/9c4b5f18-77a9-4dd7-0a4c-e554abe24859.jpg","https://placehold.co/48x48/000000/ffffff/png?text=Makako+2","https://placehold.co/48x48/222222/ffffff/png?text=Makako+3"]' height="48" src="https://storage.googleapis.com/a1aa/image/9c4b5f18-77a9-4dd7-0a4c-e554abe24859.jpg" width="48"/>
           <div class="flex flex-col">
-           <h3 class="font-semibold text-sm leading-tight truncate max-w-[6rem]">
+           <h3 class="font-semibold text-sm leading-tight truncate max-w-[5.5rem]">
             Sweet Refeição
            </h3>
            <div class="text-[10px] mt-1 flex flex-wrap gap-2 text-gray-600">
@@ -460,10 +518,6 @@
              Hambúrguer
             </span>
            </div>
-           <div class="mt-2 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[10px] rounded-full py-1 px-3 font-semibold">
-            <i class="fas fa-tag text-[9px]"></i>
-            Cupom de R$ 5 disponível
-           </div>
           </div>
          </div>
          <button class="text-purple-700 text-[10px] font-semibold rounded-full border border-purple-700 py-1 px-4 hover:bg-purple-700 hover:text-white transition focus:outline-none whitespace-nowrap">
@@ -474,7 +528,7 @@
          <div class="flex gap-4 items-center">
           <img alt="Logo quadrado com imagem de sanduíche e texto Sg Conveniência Lanches" class="w-12 h-12 rounded-lg flex-shrink-0 store-img" data-images='["https://storage.googleapis.com/a1aa/image/09303539-52f0-45c0-7af6-35c64c60dbfc.jpg","https://placehold.co/48x48/8B4513/ffffff/png?text=Sg+2","https://placehold.co/48x48/A0522D/ffffff/png?text=Sg+3"]' height="48" src="https://storage.googleapis.com/a1aa/image/09303539-52f0-45c0-7af6-35c64c60dbfc.jpg" width="48"/>
           <div class="flex flex-col">
-           <h3 class="font-semibold text-sm leading-tight truncate max-w-[6rem]">
+           <h3 class="font-semibold text-sm leading-tight truncate max-w-[5.5rem]">
             Geraldo's Marmitas
            </h3>
            <div class="text-[10px] mt-1 flex flex-wrap gap-2 text-gray-600">
@@ -498,7 +552,7 @@
          <div class="flex gap-4 items-center">
           <img alt="Logo quadrado amarelo com desenho de cozinheiro e texto Claudete Batatas" class="w-12 h-12 rounded-lg flex-shrink-0 store-img" data-images='["https://storage.googleapis.com/a1aa/image/e5b63b3e-163e-4ee6-28d2-1d185641d9cf.jpg","https://placehold.co/36x36/FFD700/000000/png?text=Claudete+2","https://placehold.co/36x36/FFC107/000000/png?text=Claudete+3"]' height="48" src="https://storage.googleapis.com/a1aa/image/e5b63b3e-163e-4ee6-28d2-1d185641d9cf.jpg" width="48"/>
           <div class="flex flex-col">
-           <h3 class="font-semibold text-sm leading-tight truncate max-w-[6rem]">
+           <h3 class="font-semibold text-sm leading-tight truncate max-w-[5.5rem]">
             Strogonof do Rei
            </h3>
            <div class="text-[10px] text-gray-600 mt-1 flex flex-wrap gap-2">
@@ -513,7 +567,8 @@
             </span>
            </div>
            <div class="mt-2 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[10px] rounded-full py-1 px-3 font-semibold">
-            <i class="fas fa-motorcycle text-[9px]"></i>
+            <i class="fas fa-motorcycle text-[9px]">
+            </i>
             Grátis a partir de R$ 45
            </div>
           </div>
@@ -526,7 +581,7 @@
          <div class="flex gap-4 items-center">
           <img alt="Logo quadrado azul com texto branco e rosa Açaí da Pri" class="w-12 h-12 rounded-lg flex-shrink-0 store-img" data-images='["https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg","https://placehold.co/36x36/4a90e2/ffffff/png?text=A%C3%A7a%C3%AD+2","https://placehold.co/36x36/357ABD/ffffff/png?text=A%C3%A7a%C3%AD+3"]' height="48" src="https://storage.googleapis.com/a1aa/image/7c264b17-94b1-4afb-ad35-3fdc57d48960.jpg" width="48"/>
           <div class="flex flex-col">
-           <h3 class="font-semibold text-sm leading-tight truncate max-w-[6rem]">
+           <h3 class="font-semibold text-sm leading-tight truncate max-w-[5.5rem]">
             Pro Burger
            </h3>
            <div class="text-[10px] mt-1 flex flex-wrap gap-2 text-gray-600">
@@ -557,7 +612,7 @@
       <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-2">
        Participe dos grupos do WhatsApp da comunidade
       </h3>
-      <div id="gruposZapContainer" class="flex flex-col gap-3">
+      <div class="flex flex-col gap-3" id="gruposZapContainer">
        <a aria-label="Grupo Hubz Moto Parts" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" href="https://chat.whatsapp.com/DaHhOoEPsYgK0pYn9QY8hU?mode=r_t" rel="noopener noreferrer" target="_blank">
         <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/607cb465-948b-42f2-9136-53cebe15e943.jpg" width="32"/>
         <div class="flex flex-col">
@@ -580,23 +635,28 @@
   <!-- Bottom Navigation -->
   <nav aria-label="Navegação principal" class="fixed bottom-0 left-0 right-0 bg-black pt-3 pb-4 px-4 flex justify-between items-center z-50">
    <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-home" type="button">
-    <i class="fas fa-home fa-lg mb-0.5"></i>
+    <i class="fas fa-home fa-lg mb-0.5">
+    </i>
     Início
    </button>
    <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-transporte" type="button">
-    <i class="fas fa-car fa-lg mb-0.5"></i>
+    <i class="fas fa-car fa-lg mb-0.5">
+    </i>
     Transporte
    </button>
    <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-vender" type="button">
-    <i class="fas fa-box fa-lg mb-0.5"></i>
+    <i class="fas fa-box fa-lg mb-0.5">
+    </i>
     Vender
    </button>
    <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-entregar" type="button">
-    <i class="fas fa-motorcycle fa-lg mb-0.5"></i>
+    <i class="fas fa-motorcycle fa-lg mb-0.5">
+    </i>
     Entregar
    </button>
    <button class="flex flex-col items-center text-white font-semibold text-[10px]" id="nav-perfil" type="button">
-    <i class="fas fa-user fa-lg mb-0.5"></i>
+    <i class="fas fa-user fa-lg mb-0.5">
+    </i>
     Perfil
    </button>
   </nav>
@@ -703,82 +763,112 @@
          <a class="block w-full" href="#">
           <img alt="banner1.png cinza arredondado" class="w-full rounded-3xl object-contain h-20 max-h-20" loading="lazy" src="banner1.png"/>
          </a>
-         <!-- Restaurantes Section -->
+         <!-- Restaurantes Section Compact Cards -->
          <section class="mt-4">
           <h2 class="font-bold text-sm">Restaurantes</h2>
           <h3 class="font-semibold text-gray-600 text-sm -mt-1 mb-2">Os itens mais populares do Hubz</h3>
-          <div class="flex gap-3 overflow-x-auto no-scrollbar pb-1">
-           <a class="flex-shrink-0 w-24 block" href="https://marmitasdobira.netlify.app" rel="noopener noreferrer" target="_blank">
-            <img alt="Rancho do Bira prato de comida caseira com arroz, feijão, carne e salada em fundo rústico" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3539f52b-6b1a-4281-3ed1-4bea3377b9fd.jpg" width="96"/>
-            <div class="flex items-center gap-1 mt-1">
-             <div>
-              <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">Rancho do Bira</p>
-              <p class="text-sm text-gray-500 leading-tight">45 min</p>
-             </div>
+          <div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+           <a class="flex-shrink-0 w-20 block" href="https://marmitasdobira.netlify.app" rel="noopener noreferrer" target="_blank">
+            <img alt="Rancho do Bira prato de comida caseira com arroz, feijão, carne e salada em fundo rústico" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3539f52b-6b1a-4281-3ed1-4bea3377b9fd.jpg" width="80"/>
+            <div class="mt-1">
+             <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">Rancho do Bira</p>
+             <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
             </div>
            </a>
-           <a class="flex-shrink-0 w-24 block" href="https://sweetcg.netlify.app" rel="noopener noreferrer" target="_blank">
-            <img alt="Sweet Refeição sobremesa doce com frutas vermelhas e chantilly em prato branco" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/26dfdf9f-8eff-4c31-8ea6-f199c0f81728.jpg" width="96"/>
-            <div class="flex items-center gap-1 mt-1">
-             <div>
-              <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">Sweet Refeição</p>
-              <p class="text-sm text-gray-500 leading-tight">45 min</p>
-             </div>
+           <a class="flex-shrink-0 w-20 block" href="https://sweetcg.netlify.app" rel="noopener noreferrer" target="_blank">
+            <img alt="Sweet Refeição sobremesa doce com frutas vermelhas e chantilly em prato branco" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/26dfdf9f-8eff-4c31-8ea6-f199c0f81728.jpg" width="80"/>
+            <div class="mt-1">
+             <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">Sweet Refeição</p>
+             <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
             </div>
            </a>
-           <a class="flex-shrink-0 w-24 block" href="https://geraldoscg.netlify.app" rel="noopener noreferrer" target="_blank">
-            <img alt="Geraldo's Marmitas marmita com arroz, feijão, carne e legumes em embalagem plástica" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/42df357b-8f51-4a93-1c02-be35547d1ce3.jpg" width="96"/>
-            <div class="flex items-center gap-1 mt-1">
-             <div>
-              <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">Geraldo's Marmitas</p>
-              <p class="text-sm text-gray-500 leading-tight">45 min</p>
-             </div>
+           <a class="flex-shrink-0 w-20 block" href="https://geraldoscg.netlify.app" rel="noopener noreferrer" target="_blank">
+            <img alt="Geraldo's Marmitas marmita com arroz, feijão, carne e legumes em embalagem plástica" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/42df357b-8f51-4a93-1c02-be35547d1ce3.jpg" width="80"/>
+            <div class="mt-1">
+             <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">Geraldo's Marmitas</p>
+             <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
             </div>
            </a>
-           <div class="flex-shrink-0 w-24">
-            <img alt="Strogonof do Rei prato de strogonoff com arroz branco e batata palha em fundo claro" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6706b4c4-12e7-422e-c419-d539a3f85813.jpg" width="96"/>
-            <div class="flex items-center gap-1 mt-1">
-             <div>
-              <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">Strogonof do Rei</p>
-              <p class="text-sm text-gray-500 leading-tight">45 min</p>
-             </div>
+           <a class="flex-shrink-0 w-20 block" href="#">
+            <img alt="Strogonof do Rei prato de strogonoff com arroz branco e batata palha em fundo claro" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6706b4c4-12e7-422e-c419-d539a3f85813.jpg" width="80"/>
+            <div class="mt-1">
+             <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">Strogonof do Rei</p>
+             <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
             </div>
-           </div>
-           <div class="flex-shrink-0 w-24">
-            <img alt="Pro Burger hambúrguer artesanal com queijo, alface e tomate em pão brioche" class="w-24 h-24 rounded-3xl object-contain" height="96" loading="lazy" src="https://storage.googleapis.com/a1aa/image/262d184c-291b-4233-b229-176fbcd66e8a.jpg" width="96"/>
-            <div class="flex items-center gap-1 mt-1">
-             <div>
-              <p class="text-[9px] font-semibold leading-tight truncate max-w-[5.5rem]">Pro Burger</p>
-              <p class="text-sm text-gray-500 leading-tight">45 min</p>
-             </div>
+           </a>
+           <a class="flex-shrink-0 w-20 block" href="#">
+            <img alt="Pro Burger hambúrguer artesanal com queijo, alface e tomate em pão brioche" class="w-20 h-20 rounded-2xl object-contain" height="80" loading="lazy" src="https://storage.googleapis.com/a1aa/image/262d184c-291b-4233-b229-176fbcd66e8a.jpg" width="80"/>
+            <div class="mt-1">
+             <p class="text-[8px] font-semibold leading-tight truncate max-w-[4.5rem]">Pro Burger</p>
+             <p class="text-[9px] text-gray-500 leading-tight">45 min</p>
             </div>
-           </div>
+           </a>
           </div>
          </section>
-         <!-- Serviços Section -->
+         <!-- Serviços Section Expanded -->
          <section class="mt-5">
           <h2 class="font-bold text-sm">Serviços</h2>
           <h3 class="font-semibold text-gray-600 text-sm -mt-1 mb-2">Com o Hubz você pode:</h3>
-          <div aria-label="Serviços" class="flex gap-3 overflow-x-auto no-scrollbar bg-white rounded-xl p-3 shadow-inner">
-           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[80px] text-center" role="button" tabindex="0">
-            <img alt="Ícone azul com garfo e faca" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0bb5b235-1831-42ca-6774-e46efc27c5be.jpg" width="36"/>
-            <span class="text-[12px] font-semibold leading-tight">Pedir Refeição</span>
+          <div aria-label="Serviços" class="flex gap-2 overflow-x-auto no-scrollbar bg-white rounded-xl p-2 shadow-inner">
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone azul com garfo e faca" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0bb5b235-1831-42ca-6774-e46efc27c5be.jpg" width="32"/>
+            <span class="text-[10px] font-semibold leading-tight">Pedir Refeição</span>
            </div>
-           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-            <img alt="Ícone amarelo com carro" class="w-11 h-11 mb-1 object-contain" loading="lazy" src="carro.png"/>
-            <span class="text-[12px] font-semibold leading-tight">Chamar Carro</span>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone amarelo com carro" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="carro.png"/>
+            <span class="text-[10px] font-semibold leading-tight">Chamar Carro</span>
            </div>
-           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-            <img alt="Ícone verde com sacola de compras" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b035e17-b8af-44a2-700c-607496b83626.jpg" width="36"/>
-            <span class="text-[12px] font-semibold leading-tight">Fazer Compras</span>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone verde com sacola de compras" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b035e17-b8af-44a2-700c-607496b83626.jpg" width="32"/>
+            <span class="text-[10px] font-semibold leading-tight">Fazer Compras</span>
            </div>
-           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-            <img alt="Ícone vermelho com caixa de envio" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c40e179-a039-482e-573a-b307e70492dc.jpg" width="36"/>
-            <span class="text-[12px] font-semibold leading-tight">Enviar Itens</span>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone vermelho com caixa de envio" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3c40e179-a039-482e-573a-b307e70492dc.jpg" width="32"/>
+            <span class="text-[10px] font-semibold leading-tight">Enviar Itens</span>
            </div>
-           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[90px] text-center" role="button" tabindex="0">
-            <img alt="Ícone azul com calendário" class="w-11 h-11 mb-1 object-contain" height="36" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2773888a-effd-45a1-84c2-09cf61843e30.jpg" width="36"/>
-            <span class="text-[12px] font-semibold leading-tight">Ver Eventos</span>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone azul com calendário" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2773888a-effd-45a1-84c2-09cf61843e30.jpg" width="32"/>
+            <span class="text-[10px] font-semibold leading-tight">Ver Eventos</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone caminhão azul" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/007bff/ffffff/png/truck-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Chamar Frete Caminhão</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone entregador com carro verde" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/28a745/ffffff/png/car-delivery-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Entregador com carro</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone entregador moto azul" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/007bff/ffffff/png/motorcycle-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Chamar Entregador Moto</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone entregador free lance amarelo" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/ffc107/000000/png/freelance-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Entregador Free Lance</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone pedreiro com capacete" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/6c757d/ffffff/png/construction-worker-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Solicitar um pedreiro</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone pintor com pincel" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/f39c12/ffffff/png/painter-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Chamar Pintor</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone eletricista com lâmpada" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/17a2b8/ffffff/png/electrician-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Chamar eletricista</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone homem com chapéu e bigode" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/343a40/ffffff/png/man-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Chamar o Severino</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone cozinheiro com chapéu branco" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/28a745/ffffff/png/chef-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Chamar Cozinheiros</span>
+           </div>
+           <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
+            <img alt="Ícone limpeza de piscina azul" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/007bff/ffffff/png/pool-cleaning-icon"/>
+            <span class="text-[10px] font-semibold leading-tight">Limpeza na Piscina</span>
            </div>
           </div>
          </section>
@@ -987,6 +1077,10 @@
                 <span>
                  Brasileira
                 </span>
+               </div>
+               <div class="mt-2 inline-flex items-center gap-1 bg-green-100 text-green-700 text-[10px] rounded-full py-1 px-3 font-semibold">
+                <i class="fas fa-motorcycle text-[9px]"></i>
+                Grátis a partir de R$ 45
                </div>
               </div>
              </div>
