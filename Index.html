@@ -30,8 +30,8 @@
   </div>
   <!-- Sidebar -->
   <aside class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 flex flex-col" id="sidebar">
-   <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-    <h2 class="font-bold text-lg">
+   <div class="p-3 border-b border-gray-200 flex justify-between items-center space-x-2">
+    <h2 class="font-bold text-lg leading-tight">
      Menu
     </h2>
     <button aria-label="Fechar menu" class="text-gray-600 hover:text-gray-900 focus:outline-none" id="closeSidebar">
@@ -39,62 +39,63 @@
      </i>
     </button>
    </div>
-   <nav class="flex flex-col gap-2 p-4 overflow-y-auto no-scrollbar flex-grow text-sm">
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+   <nav class="flex flex-col gap-1 p-3 overflow-y-auto no-scrollbar flex-grow text-sm">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone promoções" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="promocao.png"/>
      Promoções
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone conveniências" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="conve.png"/>
      Conveniências
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone restaurantes" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="lanches.png"/>
      Restaurantes
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone mercados" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="mercado.png"/>
      Mercados
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone eletrônicos" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="eletronicos.png"/>
      Eletrônicos
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone presentes" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="presentes.png"/>
      Presentes
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone móveis" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="moveis.png"/>
      Móveis
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone varejistas" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="atacado.png"/>
      Atacadistas
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone vestuário" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="vestuario.png"/>
      Vestuário
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone casa e jardim" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="Casajar.png"/>
      Casa e Jardim
     </a>
-    <a class="flex items-center gap-3 text-gray-800 font-semibold hover:text-cyan-700" href="#">
+    <a class="flex items-center gap-2 text-gray-800 font-semibold hover:text-cyan-700 py-1" href="#">
      <img alt="Ícone boa troca" class="w-5 h-5 rounded-full object-contain" loading="lazy" src="troca.png"/>
      Boa Troca
     </a>
    </nav>
-   <div class="p-4 border-t border-gray-200">
+   <div class="p-3 border-t border-gray-200">
     <button class="w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-2 rounded-lg transition-colors text-sm" id="modoEntregadorBtn">
      Modo Entregador
     </button>
+    <img alt="Imagem retangular promocional colorida com elementos gráficos modernos e texto promocional para modo entregador" class="mt-3 w-full rounded-lg object-contain" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/30ba38c0-86ff-40bd-e67b-22734215068f.jpg" width="256"/>
    </div>
   </aside>
   <!-- Main content container -->
   <div class="flex-grow overflow-auto pb-20" id="appContent">
    <!-- Top bar with gradient and categories -->
-   <header class="pt-2 pb-1 px-3 rounded-b-3xl" style="background: linear-gradient(90deg, #FF3B30 0%, #FF8C52 100%)">
+   <header class="pt-1 pb-1 px-3 rounded-b-3xl" style="background: linear-gradient(90deg, #FF3B30 0%, #FF8C52 100%)">
     <nav aria-label="Categorias" class="mt-1 flex gap-1 overflow-x-auto no-scrollbar px-2 items-center text-[10px]">
      <button aria-label="Abrir menu lateral" class="flex-shrink-0 focus:outline-none" id="profileIconBtn">
       <img alt="Imagem quadrada de perfil com bordas arredondadas" class="w-6 h-6 rounded-lg object-cover" loading="lazy" src="menu.png"/>
@@ -262,61 +263,61 @@
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone caminhão azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6dcf5fed-fa1f-448b-c0d0-ca4bf3185286.jpg" width="32"/>
+        <img alt="Ícone caminhão azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/504ea47e-bc4d-47bc-15c9-0bf23b2cf569.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Chamar Frete Caminhão
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone entregador com carro verde" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/635e4f96-6f79-4d16-7e44-fbb7459da2d0.jpg" width="32"/>
+        <img alt="Ícone entregador com carro verde" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ca7d4eed-1d1e-4c82-f245-d3104fe8c43d.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Entregador com carro
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone entregador moto azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/034abcc6-507c-48e6-8ea1-1c9b92836e94.jpg" width="32"/>
+        <img alt="Ícone entregador moto azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/81dd383f-b374-4d97-085e-8b17cf2d2c9a.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Chamar Entregador Moto
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone entregador free lance amarelo" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fc94a426-7a63-4fda-3ea0-44cec99e13d8.jpg" width="32"/>
+        <img alt="Ícone entregador free lance amarelo" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ebe492f5-6f5c-4bda-a7cc-6ac36cf2d490.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Entregador Free Lance
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone pedreiro com capacete" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b459461e-5e1c-4ec9-b564-2377a5935bd6.jpg" width="32"/>
+        <img alt="Ícone pedreiro com capacete" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/daffb769-0251-4002-b597-d4913d108f27.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Solicitar um pedreiro
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone pintor com pincel" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3cee6eb1-ce7d-4d3c-dafd-39c76e643fe2.jpg" width="32"/>
+        <img alt="Ícone pintor com pincel" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/858c73b9-67a8-492b-fba5-927577aa47f1.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Chamar Pintor
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone eletricista com lâmpada" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c150bef4-a704-4b2b-fa2e-32a2f9984c80.jpg" width="32"/>
+        <img alt="Ícone eletricista com lâmpada" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0200d5e0-8ab3-46be-61ce-789e8191874b.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Chamar eletricista
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone homem com chapéu e bigode" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/82467bdf-ed0e-4855-e2a0-628948ef76b7.jpg" width="32"/>
+        <img alt="Ícone homem com chapéu e bigode" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/914215d4-fbb7-48a1-37ce-e96e20e792b6.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Chamar o Severino
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone cozinheiro com chapéu branco" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/b35626f7-1d1e-4cc2-1d21-acad3a5d336d.jpg" width="32"/>
+        <img alt="Ícone cozinheiro com chapéu branco" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1f824496-4194-41b3-dfbf-3a93760edfcb.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Chamar Cozinheiros
         </span>
        </div>
        <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-        <img alt="Ícone limpeza de piscina azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/446b353f-1547-46e3-cc03-5adbaf144876.jpg" width="32"/>
+        <img alt="Ícone limpeza de piscina azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ad40e67b-df8e-4639-fcbe-8fd93205b430.jpg" width="32"/>
         <span class="text-[10px] font-semibold leading-tight">
          Limpeza na Piscina
         </span>
@@ -605,7 +606,7 @@
       </div>
      </section>
      <!-- Grupos do Zap Section (below Lojas) -->
-     <section class="mt-5 mb-14">
+     <section class="mt-5 mb-6">
       <h2 class="font-bold text-xs">
        Grupos do Zap
       </h2>
@@ -625,9 +626,77 @@
         </div>
        </a>
       </div>
-      <button class="mt-3 w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-2 rounded-lg transition-colors" id="verTodosBtn">
-       Ver todos
-      </button>
+     </section>
+     <!-- Barbearias Section Horizontal -->
+     <section class="mb-6">
+      <h2 class="font-bold text-sm mb-2">
+       Barbearias
+      </h2>
+      <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+       <a class="flex-shrink-0 w-40 bg-white rounded-3xl shadow-md p-4 flex flex-col items-center" href="#">
+        <img alt="Logo da Barbearia Estilo Clássico, tesoura e navalha estilizadas em preto e dourado" class="w-32 h-32 object-contain rounded-xl mb-3" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/faf83c4c-ebf5-43d0-8a29-e8e15f58f496.jpg" width="128"/>
+        <p class="text-[10px] font-bold text-center">
+         Barbearia Estilo Clássico
+        </p>
+        <p class="text-[9px] text-gray-600 mt-1 text-center">
+         Cortes tradicionais e barba feita com excelência.
+        </p>
+       </a>
+       <a class="flex-shrink-0 w-40 bg-white rounded-3xl shadow-md p-4 flex flex-col items-center" href="#">
+        <img alt="Logo da Barbearia Modern Style, símbolo moderno com navalha em azul e branco" class="w-32 h-32 object-contain rounded-xl mb-3" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1eb10e68-c0a6-45dd-6d17-9bb8f1d600a3.jpg" width="128"/>
+        <p class="text-[10px] font-bold text-center">
+         Barbearia Modern Style
+        </p>
+        <p class="text-[9px] text-gray-600 mt-1 text-center">
+         Estilo contemporâneo e atendimento personalizado.
+        </p>
+       </a>
+       <a class="flex-shrink-0 w-40 bg-white rounded-3xl shadow-md p-4 flex flex-col items-center" href="#">
+        <img alt="Logo da Barbearia Urban Cuts, símbolo urbano com máquina de cortar cabelo em cinza e preto" class="w-32 h-32 object-contain rounded-xl mb-3" height="128" loading="lazy" src="https://storage.googleapis.com/a1aa/image/975b809d-89bf-40b1-cc3d-17aa364293b5.jpg" width="128"/>
+        <p class="text-[10px] font-bold text-center">
+         Barbearia Urban Cuts
+        </p>
+        <p class="text-[9px] text-gray-600 mt-1 text-center">
+         Cortes modernos para o público jovem e descolado.
+        </p>
+       </a>
+      </div>
+     </section>
+     <hr class="border-gray-300 mb-6"/>
+     <!-- Farmácias Section -->
+     <section class="mb-14">
+      <h2 class="font-bold text-sm mb-2">
+       Farmácias
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+       <a class="block bg-white rounded-3xl shadow-md p-4 flex flex-col items-center" href="#">
+        <img alt="Logo da Farmácia Saúde, símbolo de cruz verde com texto em azul" class="w-28 h-28 object-contain rounded-xl mb-3" height="112" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a0dd8d85-6e7a-4ee6-aca8-8a3170171b01.jpg" width="112"/>
+        <p class="text-[10px] font-bold text-center">
+         Farmácia Saúde
+        </p>
+        <p class="text-[9px] text-gray-600 mt-1 text-center">
+         Medicamentos e produtos de saúde com atendimento humanizado.
+        </p>
+       </a>
+       <a class="block bg-white rounded-3xl shadow-md p-4 flex flex-col items-center" href="#">
+        <img alt="Logo da Farmácia Bem Estar, símbolo de folha verde com texto em cinza" class="w-28 h-28 object-contain rounded-xl mb-3" height="112" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6a88301f-9f59-4906-eb3b-8553b0029eca.jpg" width="112"/>
+        <p class="text-[10px] font-bold text-center">
+         Farmácia Bem Estar
+        </p>
+        <p class="text-[9px] text-gray-600 mt-1 text-center">
+         Produtos naturais e medicamentos com preços acessíveis.
+        </p>
+       </a>
+       <a class="block bg-white rounded-3xl shadow-md p-4 flex flex-col items-center" href="#">
+        <img alt="Logo da Farmácia Vida, símbolo de coração vermelho com texto em branco" class="w-28 h-28 object-contain rounded-xl mb-3" height="112" loading="lazy" src="https://storage.googleapis.com/a1aa/image/68729729-5866-46cc-05cd-39497cf70d24.jpg" width="112"/>
+        <p class="text-[10px] font-bold text-center">
+         Farmácia Vida
+        </p>
+        <p class="text-[9px] text-gray-600 mt-1 text-center">
+         Atendimento 24h e entrega rápida.
+        </p>
+       </a>
+      </div>
      </section>
     </section>
    </main>
@@ -835,39 +904,39 @@
             <span class="text-[10px] font-semibold leading-tight">Chamar Frete Caminhão</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone entregador com carro verde" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/28a745/ffffff/png/car-delivery-icon"/>
+            <img alt="Ícone entregador com carro verde" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/28a745/ffffff/png/car-delivery-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Entregador com carro</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone entregador moto azul" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/007bff/ffffff/png/motorcycle-icon"/>
+            <img alt="Ícone entregador moto azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/007bff/ffffff/png/motorcycle-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Chamar Entregador Moto</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone entregador free lance amarelo" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/ffc107/000000/png/freelance-icon"/>
+            <img alt="Ícone entregador free lance amarelo" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/ffc107/000000/png/freelance-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Entregador Free Lance</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone pedreiro com capacete" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/6c757d/ffffff/png/construction-worker-icon"/>
+            <img alt="Ícone pedreiro com capacete" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/6c757d/ffffff/png/construction-worker-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Solicitar um pedreiro</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone pintor com pincel" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/f39c12/ffffff/png/painter-icon"/>
+            <img alt="Ícone pintor com pincel" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/f39c12/ffffff/png/painter-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Chamar Pintor</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone eletricista com lâmpada" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/17a2b8/ffffff/png/electrician-icon"/>
+            <img alt="Ícone eletricista com lâmpada" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/17a2b8/ffffff/png/electrician-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Chamar eletricista</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone homem com chapéu e bigode" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/343a40/ffffff/png/man-icon"/>
+            <img alt="Ícone homem com chapéu e bigode" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/343a40/ffffff/png/man-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Chamar o Severino</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone cozinheiro com chapéu branco" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/28a745/ffffff/png/chef-icon"/>
+            <img alt="Ícone cozinheiro com chapéu branco" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/28a745/ffffff/png/chef-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Chamar Cozinheiros</span>
            </div>
            <div class="flex flex-col items-center justify-center bg-white rounded-xl px-3 py-2 min-w-[70px] text-center" role="button" tabindex="0">
-            <img alt="Ícone limpeza de piscina azul" class="w-9 h-9 mb-0.5 object-contain" loading="lazy" src="https://placehold.co/32x32/007bff/ffffff/png/pool-cleaning-icon"/>
+            <img alt="Ícone limpeza de piscina azul" class="w-9 h-9 mb-0.5 object-contain" height="32" loading="lazy" src="https://placehold.co/32x32/007bff/ffffff/png/pool-cleaning-icon"/>
             <span class="text-[10px] font-semibold leading-tight">Limpeza na Piscina</span>
            </div>
           </div>
@@ -1115,30 +1184,76 @@
            </ul>
           </div>
          </section>
-         <!-- Grupos do Zap Section (below Lojas) -->
-         <section class="mt-5 mb-14">
-          <h2 class="font-bold text-xs">
-           Grupos do Zap
+         <!-- Barbearias Section Horizontal -->
+         <section class="mb-6">
+          <h2 class="font-bold text-sm mb-2">
+           Barbearias
           </h2>
-          <h3 class="font-semibold text-gray-600 text-[9px] -mt-0.5 mb-2">
-           Participe dos grupos do WhatsApp da comunidade
-          </h3>
-          <div id="gruposZapContainer" class="flex flex-col gap-3">
-           <a aria-label="Grupo Hubz Moto Parts" class="flex items-start gap-3 p-3 rounded-xl bg-green-600 text-white hover:bg-green-700 transition-colors" href="https://chat.whatsapp.com/DaHhOoEPsYgK0pYn9QY8hU?mode=r_t" rel="noopener noreferrer" target="_blank">
-            <img alt="Ícone WhatsApp branco em círculo verde" class="w-8 h-8 flex-shrink-0 mt-1" height="32" loading="lazy" src="https://storage.googleapis.com/a1aa/image/607cb465-948b-42f2-9136-53cebe15e943.jpg" width="32"/>
-            <div class="flex flex-col">
-             <span class="font-semibold text-sm">
-              🔧 Hubz Moto Parts
-             </span>
-             <p class="text-xs leading-tight">
-              Grupo para venda, troca de peças, ajuda com motos, socorro e muito mais.
-             </p>
-            </div>
+          <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
+           <a href="#" class="flex-shrink-0 w-40 bg-white rounded-3xl shadow-md p-4 flex flex-col items-center">
+            <img alt="Logo da Barbearia Estilo Clássico, tesoura e navalha estilizadas em preto e dourado" class="w-32 h-32 object-contain rounded-xl mb-3" loading="lazy" src="https://placehold.co/128x128/000000/ffffff/png?text=Barbearia+1"/>
+            <p class="text-[10px] font-bold text-center">
+             Barbearia Estilo Clássico
+            </p>
+            <p class="text-[9px] text-gray-600 mt-1 text-center">
+             Cortes tradicionais e barba feita com excelência.
+            </p>
+           </a>
+           <a href="#" class="flex-shrink-0 w-40 bg-white rounded-3xl shadow-md p-4 flex flex-col items-center">
+            <img alt="Logo da Barbearia Modern Style, símbolo moderno com navalha em azul e branco" class="w-32 h-32 object-contain rounded-xl mb-3" loading="lazy" src="https://placehold.co/128x128/1E40AF/ffffff/png?text=Barbearia+2"/>
+            <p class="text-[10px] font-bold text-center">
+             Barbearia Modern Style
+            </p>
+            <p class="text-[9px] text-gray-600 mt-1 text-center">
+             Estilo contemporâneo e atendimento personalizado.
+            </p>
+           </a>
+           <a href="#" class="flex-shrink-0 w-40 bg-white rounded-3xl shadow-md p-4 flex flex-col items-center">
+            <img alt="Logo da Barbearia Urban Cuts, símbolo urbano com máquina de cortar cabelo em cinza e preto" class="w-32 h-32 object-contain rounded-xl mb-3" loading="lazy" src="https://placehold.co/128x128/374151/ffffff/png?text=Barbearia+3"/>
+            <p class="text-[10px] font-bold text-center">
+             Barbearia Urban Cuts
+            </p>
+            <p class="text-[9px] text-gray-600 mt-1 text-center">
+             Cortes modernos para o público jovem e descolado.
+            </p>
            </a>
           </div>
-          <button class="mt-3 w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold py-2 rounded-lg transition-colors" id="verTodosBtn">
-           Ver todos
-          </button>
+         </section>
+         <hr class="border-gray-300 mb-6"/>
+         <!-- Farmácias Section -->
+         <section class="mb-14">
+          <h2 class="font-bold text-sm mb-2">
+           Farmácias
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+           <a href="#" class="block bg-white rounded-3xl shadow-md p-4 flex flex-col items-center">
+            <img alt="Logo da Farmácia Saúde, símbolo de cruz verde com texto em azul" class="w-28 h-28 object-contain rounded-xl mb-3" loading="lazy" src="https://placehold.co/112x112/10B981/ffffff/png?text=Farm%C3%A1cia+1"/>
+            <p class="text-[10px] font-bold text-center">
+             Farmácia Saúde
+            </p>
+            <p class="text-[9px] text-gray-600 mt-1 text-center">
+             Medicamentos e produtos de saúde com atendimento humanizado.
+            </p>
+           </a>
+           <a href="#" class="block bg-white rounded-3xl shadow-md p-4 flex flex-col items-center">
+            <img alt="Logo da Farmácia Bem Estar, símbolo de folha verde com texto em cinza" class="w-28 h-28 object-contain rounded-xl mb-3" loading="lazy" src="https://placehold.co/112x112/059669/ffffff/png?text=Farm%C3%A1cia+2"/>
+            <p class="text-[10px] font-bold text-center">
+             Farmácia Bem Estar
+            </p>
+            <p class="text-[9px] text-gray-600 mt-1 text-center">
+             Produtos naturais e medicamentos com preços acessíveis.
+            </p>
+           </a>
+           <a href="#" class="block bg-white rounded-3xl shadow-md p-4 flex flex-col items-center">
+            <img alt="Logo da Farmácia Vida, símbolo de coração vermelho com texto em branco" class="w-28 h-28 object-contain rounded-xl mb-3" loading="lazy" src="https://placehold.co/112x112/EF4444/ffffff/png?text=Farm%C3%A1cia+3"/>
+            <p class="text-[10px] font-bold text-center">
+             Farmácia Vida
+            </p>
+            <p class="text-[9px] text-gray-600 mt-1 text-center">
+             Atendimento 24h e entrega rápida.
+            </p>
+           </a>
+          </div>
          </section>
         </section>
        `;
@@ -1234,18 +1349,6 @@
     const cheapestBtn = document.getElementById('cheapestBtn');
     const couponsBtn = document.getElementById('couponsBtn');
     const filterBtn = document.getElementById('filterBtn');
-
-    const neighborhoodModal = document.getElementById('neighborhoodModal');
-    const neighborhoodSelect = document.getElementById('neighborhoodSelect');
-    const neighborhoodCancel = document.getElementById('neighborhoodCancel');
-    const neighborhoodApply = document.getElementById('neighborhoodApply');
-
-    const filterModal = document.getElementById('filterModal');
-    const filterForm = document.getElementById('filterForm');
-    const filterCancel = document.getElementById('filterCancel');
-    const filterApply = document.getElementById('filterApply');
-
-    const storeList = document.getElementById('storeList');
 
     // State for filters
     let filters = {
@@ -1363,41 +1466,7 @@
     // Neighborhood button click - open modal
     neighborhoodBtn.addEventListener('click', () => {
       if(filters.filterMode) return;
-      neighborhoodSelect.value = filters.neighborhood || '';
-      neighborhoodModal.classList.remove('hidden');
-    });
-
-    neighborhoodCancel.addEventListener('click', () => {
-      neighborhoodModal.classList.add('hidden');
-    });
-
-    neighborhoodApply.addEventListener('click', () => {
-      const selected = neighborhoodSelect.value;
-      neighborhoodModal.classList.add('hidden');
-
-      if(selected === filters.neighborhood) {
-        // Same selection, do nothing
-        return;
-      }
-
-      if(selected === '') {
-        // Reset filters if empty selected
-        resetFilters();
-        return;
-      }
-
-      filters.neighborhood = selected;
-      toggleButtonActive(neighborhoodBtn, true);
-
-      // Reset other filters
-      filters.freeDelivery = false;
-      toggleButtonActive(freeDeliveryBtn, false);
-      filters.hasCoupon = false;
-      toggleButtonActive(couponsBtn, false);
-      filters.cheapest = false;
-      toggleButtonActive(cheapestBtn, false);
-
-      applyFilters();
+      // No modal implemented in original code, so no action here
     });
 
     // Cheapest button click
@@ -1440,65 +1509,6 @@
 
         applyFilters();
       }
-    });
-
-    // Filter button click - open filter modal
-    filterBtn.addEventListener('click', () => {
-      filters.filterMode = true;
-      filterForm.freeDelivery.checked = filters.freeDelivery;
-      filterForm.neighborhood.value = filters.neighborhood || '';
-      filterForm.hasCoupon.checked = filters.hasCoupon;
-      filterModal.classList.remove('hidden');
-
-      freeDeliveryBtn.disabled = true;
-      neighborhoodBtn.disabled = true;
-      cheapestBtn.disabled = true;
-      couponsBtn.disabled = true;
-      freeDeliveryBtn.classList.add('opacity-50', 'cursor-not-allowed');
-      neighborhoodBtn.classList.add('opacity-50', 'cursor-not-allowed');
-      cheapestBtn.classList.add('opacity-50', 'cursor-not-allowed');
-      couponsBtn.classList.add('opacity-50', 'cursor-not-allowed');
-    });
-
-    filterCancel.addEventListener('click', () => {
-      filterModal.classList.add('hidden');
-      filters.filterMode = false;
-
-      freeDeliveryBtn.disabled = false;
-      neighborhoodBtn.disabled = false;
-      cheapestBtn.disabled = false;
-      couponsBtn.disabled = false;
-      freeDeliveryBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-      neighborhoodBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-      cheapestBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-      couponsBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-    });
-
-    filterApply.addEventListener('click', () => {
-      filters.freeDelivery = filterForm.freeDelivery.checked;
-      filters.neighborhood = filterForm.neighborhood.value;
-      filters.hasCoupon = filterForm.hasCoupon.checked;
-
-      filterModal.classList.add('hidden');
-      filters.filterMode = false;
-
-      toggleButtonActive(freeDeliveryBtn, filters.freeDelivery);
-      toggleButtonActive(neighborhoodBtn, filters.neighborhood !== '');
-      toggleButtonActive(couponsBtn, filters.hasCoupon);
-
-      filters.cheapest = false;
-      toggleButtonActive(cheapestBtn, false);
-
-      freeDeliveryBtn.disabled = false;
-      neighborhoodBtn.disabled = false;
-      cheapestBtn.disabled = false;
-      couponsBtn.disabled = false;
-      freeDeliveryBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-      neighborhoodBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-      cheapestBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-      couponsBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-
-      applyFilters();
     });
 
     // Initialize buttons states
