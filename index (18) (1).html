@@ -1,0 +1,495 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcrição e Edição de Áudio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #d1d5db; /* Tailwind gray-300 */
+            outline: none;
+            margin: 0;
+            padding: 0;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #2563eb; /* Tailwind blue-600 */
+            cursor: pointer;
+            border: 2px solid white;
+            margin-top: -6px;
+            transition: background-color 0.3s ease;
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            background: #1d4ed8; /* Tailwind blue-700 */
+        }
+        input[type=range]::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #2563eb;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: background-color 0.3s ease;
+        }
+        input[type=range]::-moz-range-thumb:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-blue-100 to-white min-h-screen flex flex-col">
+    <header class="bg-blue-600 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-center">
+            <h1 class="text-white text-3xl font-extrabold tracking-wide select-none">Transcrição e Edição de Áudio</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-6 py-10 max-w-3xl">
+        <section class="bg-white rounded-xl shadow-lg p-8 flex flex-col space-y-8">
+            <div class="upload-section flex flex-col items-center space-y-4">
+                <input type="file" id="audio-upload" accept="audio/*" class="hidden" />
+                <label for="audio-upload" class="flex items-center space-x-3 cursor-pointer rounded-lg bg-blue-500 hover:bg-blue-600 transition-colors px-8 py-3 text-white font-semibold shadow-md select-none">
+                    <i class="fas fa-upload fa-lg"></i>
+                    <span>Carregar Áudio</span>
+                </label>
+                <p id="audio-file-name" class="text-gray-700 text-center font-medium break-words max-w-full"></p>
+            </div>
+
+            <div id="audio-player-container" class="hidden w-full flex flex-col space-y-4">
+                <audio id="audio-player" controls class="w-full rounded-md shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-400" preload="metadata"></audio>
+
+                <div class="flex flex-col space-y-2">
+                    <label class="font-semibold text-gray-700 select-none">Definir trecho para corte:</label>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex flex-col w-1/2">
+                            <label for="start-range" class="text-sm text-gray-600 select-none">Início: <span id="start-time">0:00</span></label>
+                            <input type="range" id="start-range" min="0" max="0" step="0.01" value="0" disabled />
+                        </div>
+                        <div class="flex flex-col w-1/2">
+                            <label for="end-range" class="text-sm text-gray-600 select-none">Fim: <span id="end-time">0:00</span></label>
+                            <input type="range" id="end-range" min="0" max="0" step="0.01" value="0" disabled />
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Use os controles para selecionar o trecho do áudio que deseja manter.</p>
+                </div>
+
+                <button id="cut-save-btn" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg shadow-lg transition-colors flex items-center justify-center space-x-3 select-none disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <i class="fas fa-cut fa-lg"></i>
+                    <span>Cortar e Salvar Novo Áudio</span>
+                </button>
+            </div>
+
+            <div class="transcription-section flex flex-col">
+                <textarea id="transcription" placeholder="A transcrição aparecerá aqui..." readonly class="w-full h-56 p-4 border border-gray-300 rounded-lg resize-none text-gray-800 font-medium focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                <button id="transcribe-btn" class="mt-6 w-full py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-lg transition-colors flex items-center justify-center space-x-3 select-none disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i class="fas fa-microphone"></i>
+                    <span>Transcrever Áudio</span>
+                </button>
+            </div>
+
+            <div id="progress-container" class="hidden mt-6">
+                <div class="w-full bg-gray-200 rounded-full h-6 overflow-hidden shadow-inner">
+                    <div id="progress-bar" class="bg-blue-600 text-xs font-semibold text-white text-center leading-6 rounded-full transition-all" style="width: 0%">0%</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white text-center py-4 select-none">
+        <p>© 2024 Transcrição e Edição de Áudio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const API_KEY = '9e33a44bae5c49aeb2cfbe855918293e'; // Substitua pela sua chave real
+
+        const audioUpload = document.getElementById('audio-upload');
+        const audioPlayer = document.getElementById('audio-player');
+        const audioFileName = document.getElementById('audio-file-name');
+        const transcribeBtn = document.getElementById('transcribe-btn');
+        const transcriptionTextarea = document.getElementById('transcription');
+        const progressContainer = document.getElementById('progress-container');
+        const progressBar = document.getElementById('progress-bar');
+
+        const audioPlayerContainer = document.getElementById('audio-player-container');
+        const startRange = document.getElementById('start-range');
+        const endRange = document.getElementById('end-range');
+        const startTimeLabel = document.getElementById('start-time');
+        const endTimeLabel = document.getElementById('end-time');
+        const cutSaveBtn = document.getElementById('cut-save-btn');
+
+        let transcriptionInterval = null;
+        let audioBuffer = null;
+        let audioContext = null;
+        let originalFileName = '';
+        let audioBlobUrl = null;
+
+        // Format seconds to mm:ss or m:ss
+        function formatTime(seconds) {
+            seconds = Math.max(0, seconds);
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${s.toString().padStart(2, '0')}`;
+        }
+
+        // Enable or disable cut controls based on audio loaded
+        function enableCutControls(duration) {
+            startRange.disabled = false;
+            endRange.disabled = false;
+            cutSaveBtn.disabled = false;
+
+            startRange.min = 0;
+            startRange.max = duration;
+            startRange.value = 0;
+
+            endRange.min = 0;
+            endRange.max = duration;
+            endRange.value = duration;
+
+            startTimeLabel.textContent = formatTime(0);
+            endTimeLabel.textContent = formatTime(duration);
+        }
+
+        // Update labels and ensure start < end
+        function updateRanges() {
+            let startVal = parseFloat(startRange.value);
+            let endVal = parseFloat(endRange.value);
+
+            if (startVal > endVal) {
+                // Swap values if start is greater than end
+                [startVal, endVal] = [endVal, startVal];
+                startRange.value = startVal;
+                endRange.value = endVal;
+            }
+
+            startTimeLabel.textContent = formatTime(startVal);
+            endTimeLabel.textContent = formatTime(endVal);
+        }
+
+        // Load audio file into AudioContext buffer
+        async function loadAudioBuffer(file) {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            const arrayBuffer = await file.arrayBuffer();
+            return await audioContext.decodeAudioData(arrayBuffer);
+        }
+
+        // Create a Blob from sliced AudioBuffer and trigger download
+        function exportWav(audioBuffer, startSec, endSec, fileName) {
+            // Slice the buffer
+            const sampleRate = audioBuffer.sampleRate;
+            const startSample = Math.floor(startSec * sampleRate);
+            const endSample = Math.floor(endSec * sampleRate);
+            const length = endSample - startSample;
+
+            // Create new buffer with sliced data
+            const numberOfChannels = audioBuffer.numberOfChannels;
+            const newBuffer = audioContext.createBuffer(numberOfChannels, length, sampleRate);
+
+            for (let channel = 0; channel < numberOfChannels; channel++) {
+                const oldData = audioBuffer.getChannelData(channel);
+                const newData = newBuffer.getChannelData(channel);
+                for (let i = 0; i < length; i++) {
+                    newData[i] = oldData[startSample + i];
+                }
+            }
+
+            // Encode WAV
+            const wavBlob = encodeWAV(newBuffer);
+            const url = URL.createObjectURL(wavBlob);
+            const a = document.createElement('a');
+            const baseName = fileName.replace(/\.[^/.]+$/, "");
+            a.href = url;
+            a.download = `${baseName}_cortado.wav`;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 100);
+        }
+
+        // WAV encoder adapted from https://github.com/Jam3/audiobuffer-to-wav MIT License
+        function encodeWAV(buffer) {
+            const numChannels = buffer.numberOfChannels;
+            const sampleRate = buffer.sampleRate;
+            const format = 1; // PCM
+            const bitDepth = 16;
+
+            const samplesLength = buffer.length * numChannels * 2;
+            const bufferLength = 44 + samplesLength;
+            const arrayBuffer = new ArrayBuffer(bufferLength);
+            const view = new DataView(arrayBuffer);
+
+            /* RIFF identifier */
+            writeString(view, 0, 'RIFF');
+            /* file length */
+            view.setUint32(4, 36 + samplesLength, true);
+            /* RIFF type */
+            writeString(view, 8, 'WAVE');
+            /* format chunk identifier */
+            writeString(view, 12, 'fmt ');
+            /* format chunk length */
+            view.setUint32(16, 16, true);
+            /* sample format (raw) */
+            view.setUint16(20, format, true);
+            /* channel count */
+            view.setUint16(22, numChannels, true);
+            /* sample rate */
+            view.setUint32(24, sampleRate, true);
+            /* byte rate (sample rate * block align) */
+            view.setUint32(28, sampleRate * numChannels * bitDepth / 8, true);
+            /* block align (channel count * bytes per sample) */
+            view.setUint16(32, numChannels * bitDepth / 8, true);
+            /* bits per sample */
+            view.setUint16(34, bitDepth, true);
+            /* data chunk identifier */
+            writeString(view, 36, 'data');
+            /* data chunk length */
+            view.setUint32(40, samplesLength, true);
+
+            // Write interleaved PCM samples
+            let offset = 44;
+            const channels = [];
+            for (let i = 0; i < numChannels; i++) {
+                channels.push(buffer.getChannelData(i));
+            }
+
+            for (let i = 0; i < buffer.length; i++) {
+                for (let channel = 0; channel < numChannels; channel++) {
+                    // Clamp sample to [-1,1]
+                    let sample = Math.max(-1, Math.min(1, channels[channel][i]));
+                    // Scale to 16-bit signed int
+                    sample = sample < 0 ? sample * 0x8000 : sample * 0x7FFF;
+                    view.setInt16(offset, sample, true);
+                    offset += 2;
+                }
+            }
+
+            return new Blob([arrayBuffer], { type: 'audio/wav' });
+        }
+
+        function writeString(view, offset, string) {
+            for (let i = 0; i < string.length; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        // Event listeners for range inputs
+        startRange.addEventListener('input', () => {
+            updateRanges();
+            if (parseFloat(startRange.value) > parseFloat(endRange.value)) {
+                endRange.value = startRange.value;
+                endTimeLabel.textContent = formatTime(parseFloat(endRange.value));
+            }
+        });
+
+        endRange.addEventListener('input', () => {
+            updateRanges();
+            if (parseFloat(endRange.value) < parseFloat(startRange.value)) {
+                startRange.value = endRange.value;
+                startTimeLabel.textContent = formatTime(parseFloat(startRange.value));
+            }
+        });
+
+        cutSaveBtn.addEventListener('click', () => {
+            if (!audioBuffer) {
+                alert('Nenhum áudio carregado para cortar.');
+                return;
+            }
+            const startSec = parseFloat(startRange.value);
+            const endSec = parseFloat(endRange.value);
+            if (startSec >= endSec) {
+                alert('O tempo de início deve ser menor que o tempo de fim.');
+                return;
+            }
+            cutSaveBtn.disabled = true;
+            exportWav(audioBuffer, startSec, endSec, originalFileName);
+            cutSaveBtn.disabled = false;
+        });
+
+        audioUpload.addEventListener('change', async (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                originalFileName = file.name;
+                audioFileName.textContent = `Arquivo carregado: ${file.name}`;
+                transcriptionTextarea.value = '';
+                progressContainer.classList.add('hidden');
+                progressBar.style.width = '0%';
+                progressBar.textContent = '0%';
+                transcribeBtn.disabled = false;
+
+                // Revoke old blob url if exists
+                if (audioBlobUrl) {
+                    URL.revokeObjectURL(audioBlobUrl);
+                    audioBlobUrl = null;
+                }
+
+                audioBlobUrl = URL.createObjectURL(file);
+                audioPlayer.src = audioBlobUrl;
+                audioPlayerContainer.classList.remove('hidden');
+
+                // Load audio buffer for editing
+                try {
+                    audioBuffer = await loadAudioBuffer(file);
+                    enableCutControls(audioBuffer.duration);
+                } catch (e) {
+                    console.error('Erro ao carregar áudio para edição:', e);
+                    alert('Erro ao carregar áudio para edição.');
+                    startRange.disabled = true;
+                    endRange.disabled = true;
+                    cutSaveBtn.disabled = true;
+                    audioBuffer = null;
+                }
+            }
+        });
+
+        transcribeBtn.addEventListener('click', () => {
+            const file = audioUpload.files[0];
+            if (!file) {
+                alert("Por favor, carregue um arquivo de áudio.");
+                return;
+            }
+            transcribeBtn.disabled = true;
+            transcriptionTextarea.value = '';
+            progressContainer.classList.remove('hidden');
+            progressBar.style.width = '0%';
+            progressBar.textContent = '0%';
+            uploadAudio(file);
+        });
+
+        async function uploadAudio(file) {
+            const uploadUrl = 'https://api.assemblyai.com/v2/upload';
+
+            try {
+                // AssemblyAI expects raw binary upload, not formData for upload endpoint
+                const reader = new FileReader();
+                reader.readAsArrayBuffer(file);
+                reader.onload = async () => {
+                    const arrayBuffer = reader.result;
+                    const response = await fetch(uploadUrl, {
+                        method: 'POST',
+                        headers: {
+                            authorization: API_KEY,
+                            'content-type': 'application/octet-stream',
+                        },
+                        body: arrayBuffer,
+                    });
+
+                    const result = await response.json();
+                    if (result.upload_url) {
+                        transcribeAudio(result.upload_url);
+                    } else {
+                        alert('Erro ao fazer upload: ' + JSON.stringify(result));
+                        transcribeBtn.disabled = false;
+                        progressContainer.classList.add('hidden');
+                    }
+                };
+                reader.onerror = () => {
+                    alert('Erro ao ler o arquivo de áudio.');
+                    transcribeBtn.disabled = false;
+                    progressContainer.classList.add('hidden');
+                };
+            } catch (error) {
+                console.error('Erro no upload:', error);
+                alert('Erro ao fazer upload do áudio.');
+                transcribeBtn.disabled = false;
+                progressContainer.classList.add('hidden');
+            }
+        }
+
+        async function transcribeAudio(audioUrl) {
+            const transcribeUrl = 'https://api.assemblyai.com/v2/transcript';
+
+            try {
+                const response = await fetch(transcribeUrl, {
+                    method: 'POST',
+                    headers: {
+                        authorization: API_KEY,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ audio_url: audioUrl, language_code: 'pt' }),
+                });
+
+                const result = await response.json();
+                if (result.id) {
+                    checkTranscription(result.id);
+                } else {
+                    alert('Erro ao iniciar a transcrição: ' + JSON.stringify(result));
+                    transcribeBtn.disabled = false;
+                    progressContainer.classList.add('hidden');
+                }
+            } catch (error) {
+                console.error('Erro na transcrição:', error);
+                alert('Erro ao iniciar a transcrição.');
+                transcribeBtn.disabled = false;
+                progressContainer.classList.add('hidden');
+            }
+        }
+
+        async function checkTranscription(transcriptionId) {
+            const statusUrl = `https://api.assemblyai.com/v2/transcript/${transcriptionId}`;
+
+            transcriptionInterval = setInterval(async () => {
+                try {
+                    const response = await fetch(statusUrl, {
+                        method: 'GET',
+                        headers: { authorization: API_KEY },
+                    });
+
+                    const result = await response.json();
+                    if (result.status === 'completed') {
+                        clearInterval(transcriptionInterval);
+                        transcriptionTextarea.value = result.text || '';
+                        progressBar.style.width = '100%';
+                        progressBar.textContent = '100%';
+                        transcribeBtn.disabled = false;
+                        downloadTranscription(result.text || '', originalFileName);
+                    } else if (result.status === 'failed') {
+                        clearInterval(transcriptionInterval);
+                        alert('Erro ao transcrever o áudio.');
+                        transcribeBtn.disabled = false;
+                        progressContainer.classList.add('hidden');
+                    } else {
+                        const progress = Math.min(100, (result.progress || 0) * 100);
+                        progressBar.style.width = progress + '%';
+                        progressBar.textContent = progress + '%';
+                    }
+                } catch (error) {
+                    console.error('Erro ao checar status:', error);
+                    clearInterval(transcriptionInterval);
+                    transcribeBtn.disabled = false;
+                    progressContainer.classList.add('hidden');
+                }
+            }, 3000);
+        }
+
+        function downloadTranscription(text, originalFileName) {
+            const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const baseName = originalFileName.replace(/\.[^/.]+$/, "");
+            a.href = url;
+            a.download = `${baseName}_transcricao.txt`;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 100);
+        }
+    </script>
+</body>
+</html>
