@@ -53,20 +53,20 @@
    /* Compact filter bar for mobile */
    @media (max-width: 400px) {
      #filters {
-       max-width: 90vw;
-       padding-left: 0.25rem;
-       padding-right: 0.25rem;
+       max-width: 88vw;
+       padding-left: 0.2rem;
+       padding-right: 0.2rem;
      }
      #filters .filter-btn {
-       padding-left: 0.5rem;
-       padding-right: 0.5rem;
+       padding-left: 0.4rem;
+       padding-right: 0.4rem;
        font-size: 9px;
      }
      #filters .filter-btn span {
        white-space: nowrap;
      }
      #filters .filter-btn i {
-       margin-right: 0.15rem;
+       margin-right: 0.12rem;
      }
    }
   </style>
@@ -75,9 +75,8 @@
   <div class="max-w-md mx-auto bg-white min-h-screen flex flex-col">
    <!-- Top banner with orange background and icons -->
    <div class="relative rounded-b-3xl overflow-hidden bg-gradient-to-b from-orange-500 to-orange-600 h-16 flex items-center justify-between px-4">
-    <button aria-label="Perfil" class="text-white text-xl">
-     <i class="fas fa-user-circle">
-     </i>
+    <button aria-label="Perfil" class="text-white text-xl p-0 m-0">
+     <img alt="Imagem de perfil de usuário com fundo laranja e rosto sorridente, estilo avatar minimalista" class="rounded-full w-12 h-12 object-cover" height="48" src="https://storage.googleapis.com/a1aa/image/cc6ac2f2-d33a-41ce-319b-3331b74241e5.jpg" width="48"/>
     </button>
     <button aria-label="Carrinho" class="text-white text-xl">
      <i class="fas fa-shopping-bag">
@@ -88,25 +87,29 @@
    <div class="p-3 space-y-2 flex-shrink-0 bg-white">
     <div class="flex items-center space-x-2 overflow-x-auto scrollbar-hide" id="filters">
      <button class="filter-btn flex-shrink-0 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white font-semibold rounded-full px-3 py-1 flex items-center space-x-1" data-filter="all" type="button">
-      <i aria-hidden="true" class="fas fa-th-large text-white text-[14px]"></i>
+      <i aria-hidden="true" class="fas fa-th-large text-white text-[14px]">
+      </i>
       <span>
        Todas
       </span>
      </button>
      <button class="filter-btn flex-shrink-0 bg-white border border-gray-300 text-gray-700 font-semibold rounded-full px-3 py-1 flex items-center space-x-1" data-filter="marmitas" type="button">
-      <i aria-hidden="true" class="fas fa-utensils text-gray-700 text-[14px]"></i>
+      <i aria-hidden="true" class="fas fa-utensils text-gray-700 text-[14px]">
+      </i>
       <span>
        Marmitas
       </span>
      </button>
      <button class="filter-btn flex-shrink-0 bg-white border border-gray-300 text-gray-700 font-semibold rounded-full px-3 py-1 flex items-center space-x-1" data-filter="bebidas" type="button">
-      <i aria-hidden="true" class="fas fa-cocktail text-gray-700 text-[14px]"></i>
+      <i aria-hidden="true" class="fas fa-cocktail text-gray-700 text-[14px]">
+      </i>
       <span>
        Bebidas
       </span>
      </button>
      <button class="filter-btn flex-shrink-0 bg-white border border-gray-300 text-gray-700 font-semibold rounded-full px-3 py-1 flex items-center space-x-1" data-filter="porcoes" type="button">
-      <i aria-hidden="true" class="fas fa-pizza-slice text-gray-700 text-[14px]"></i>
+      <i aria-hidden="true" class="fas fa-pizza-slice text-gray-700 text-[14px]">
+      </i>
       <span>
        Porções
       </span>
@@ -121,27 +124,27 @@
     <p class="text-xs text-gray-500 mt-1">
      Escolha sua marmita favorita para o almoço!
     </p>
-    <div class="pb-4 bg-white flex space-x-2 overflow-x-auto scrollbar-hide mt-3">
+    <div class="pb-4 bg-white flex space-x-1.5 overflow-x-auto scrollbar-hide mt-3">
      <!-- Card 1 -->
-     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col min-w-[110px] max-w-[110px]" style="min-height: 160px">
-      <img alt="Golden Mango Twist bolo coberto com frutas frescas e palitos de chocolate, fatias de manga e morango decorando" class="w-full h-18 object-cover rounded-t-xl" height="72" src="https://storage.googleapis.com/a1aa/image/2bee0a04-dd30-4529-ed0a-fa5c213b37e1.jpg" width="110"/>
-      <div class="p-1.5 flex flex-col flex-grow">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col min-w-[95px] max-w-[95px]" style="min-height: 140px">
+      <img alt="Golden Mango Twist bolo coberto com frutas frescas e palitos de chocolate, fatias de manga e morango decorando" class="w-full h-16 object-cover rounded-t-xl" height="64" src="https://storage.googleapis.com/a1aa/image/2bee0a04-dd30-4529-ed0a-fa5c213b37e1.jpg" width="95"/>
+      <div class="p-1 flex flex-col flex-grow">
        <div class="title-container" data-title="Marmita P">
         <div class="ticker-wrapper hidden">
          <div class="ticker" style="animation-duration: 12s;">
          </div>
         </div>
-        <div class="static-title text-[10px] font-bold text-gray-900 leading-tight truncate">
+        <div class="static-title text-[9px] font-bold text-gray-900 leading-tight truncate">
         </div>
        </div>
-       <p class="text-[8px] text-gray-500 mt-0.5 description">
+       <p class="text-[7px] text-gray-500 mt-0.5 description">
         Marmita pequena com arroz, feijão, salada, macarrão, churrasco e variedades do dia.
        </p>
-       <p class="text-[9px] font-semibold text-orange-500 mt-1">
+       <p class="text-[8px] font-semibold text-orange-500 mt-1">
         R$ 29,90
        </p>
        <div class="flex justify-center mt-auto pt-1">
-        <button aria-label="Adicionar Golden Mango Twist" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[9px]">
+        <button aria-label="Adicionar Golden Mango Twist" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[8px]">
          <i class="fas fa-plus">
          </i>
          <span>
@@ -152,25 +155,25 @@
       </div>
      </div>
      <!-- Card 2 -->
-     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col min-w-[110px] max-w-[110px]" style="min-height: 160px">
-      <img alt="Torta Mágica de Frutas coberta com frutas vermelhas frescas e fatias de kiwi, decorada com morangos e amoras" class="w-full h-18 object-cover rounded-t-xl" height="72" src="https://storage.googleapis.com/a1aa/image/7f0c00a7-15e3-431b-e5df-a971044b6382.jpg" width="110"/>
-      <div class="p-1.5 flex flex-col flex-grow">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col min-w-[95px] max-w-[95px]" style="min-height: 140px">
+      <img alt="Torta Mágica de Frutas coberta com frutas vermelhas frescas e fatias de kiwi, decorada com morangos e amoras" class="w-full h-16 object-cover rounded-t-xl" height="64" src="https://storage.googleapis.com/a1aa/image/7f0c00a7-15e3-431b-e5df-a971044b6382.jpg" width="95"/>
+      <div class="p-1 flex flex-col flex-grow">
        <div class="title-container" data-title="Marmita M">
         <div class="ticker-wrapper hidden">
          <div class="ticker" style="animation-duration: 18s;">
          </div>
         </div>
-        <div class="static-title text-[10px] font-bold text-gray-900 leading-tight truncate">
+        <div class="static-title text-[9px] font-bold text-gray-900 leading-tight truncate">
         </div>
        </div>
-       <p class="text-[8px] text-gray-500 mt-0.5 description">
+       <p class="text-[7px] text-gray-500 mt-0.5 description">
         Marmita média com arroz, feijão, salada, macarrão, churrasco e variedades do dia.
        </p>
-       <p class="text-[9px] font-semibold text-orange-500 mt-1">
+       <p class="text-[8px] font-semibold text-orange-500 mt-1">
         R$ 34,50
        </p>
        <div class="flex justify-center mt-auto pt-1">
-        <button aria-label="Adicionar Torta Mágica de Frutas" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[9px]">
+        <button aria-label="Adicionar Torta Mágica de Frutas" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[8px]">
          <i class="fas fa-plus">
          </i>
          <span>
@@ -181,25 +184,25 @@
       </div>
      </div>
      <!-- Card 3 -->
-     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col min-w-[110px] max-w-[110px]" style="min-height: 160px">
-      <img alt="Bolo Sponge de Limão com limões e frutas vermelhas sobre uma mesa de madeira rústica" class="w-full h-18 object-cover rounded-t-xl" height="72" src="https://storage.googleapis.com/a1aa/image/f60b1b67-3061-4bb2-541d-232cdc3a7df9.jpg" width="110"/>
-      <div class="p-1.5 flex flex-col flex-grow">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col min-w-[95px] max-w-[95px]" style="min-height: 140px">
+      <img alt="Bolo Sponge de Limão com limões e frutas vermelhas sobre uma mesa de madeira rústica" class="w-full h-16 object-cover rounded-t-xl" height="64" src="https://storage.googleapis.com/a1aa/image/f60b1b67-3061-4bb2-541d-232cdc3a7df9.jpg" width="95"/>
+      <div class="p-1 flex flex-col flex-grow">
        <div class="title-container" data-title="Marmita G">
         <div class="ticker-wrapper hidden">
          <div class="ticker" style="animation-duration: 12s;">
          </div>
         </div>
-        <div class="static-title text-[10px] font-bold text-gray-900 leading-tight truncate">
+        <div class="static-title text-[9px] font-bold text-gray-900 leading-tight truncate">
         </div>
        </div>
-       <p class="text-[8px] text-gray-500 mt-0.5 description">
+       <p class="text-[7px] text-gray-500 mt-0.5 description">
         Marmita grande com arroz, feijão, salada, macarrão, churrasco e variedades do dia.
        </p>
-       <p class="text-[9px] font-semibold text-orange-500 mt-1">
+       <p class="text-[8px] font-semibold text-orange-500 mt-1">
         R$ 27,00
        </p>
        <div class="flex justify-center mt-auto pt-1">
-        <button aria-label="Adicionar Bolo Sponge de Limão" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[9px]">
+        <button aria-label="Adicionar Bolo Sponge de Limão" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[8px]">
          <i class="fas fa-plus">
          </i>
          <span>
@@ -219,27 +222,27 @@
     <p class="text-xs text-gray-500 mt-1 description">
      Refresque-se com nossas bebidas geladas e saborosas
     </p>
-    <div class="pb-6 bg-white flex space-x-2 overflow-x-auto scrollbar-hide mt-3">
+    <div class="pb-6 bg-white flex space-x-1.5 overflow-x-auto scrollbar-hide mt-3">
      <!-- Bebida 1 -->
-     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[110px] max-w-[110px]" style="min-height: 130px">
-      <img alt="Refrigerante em copo com gelo e limão, copo transparente com líquido escuro e fatias de limão" class="w-18 h-18 object-cover rounded-full mt-2" height="72" src="https://storage.googleapis.com/a1aa/image/0c1d15b1-0aae-4b2a-79d1-d30cab066c89.jpg" width="72"/>
-      <div class="p-2 flex flex-col flex-grow w-full text-center">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[95px] max-w-[95px]" style="min-height: 115px">
+      <img alt="Refrigerante em copo com gelo e limão, copo transparente com líquido escuro e fatias de limão" class="w-16 h-16 object-cover rounded-full mt-2" height="64" src="https://storage.googleapis.com/a1aa/image/0c1d15b1-0aae-4b2a-79d1-d30cab066c89.jpg" width="64"/>
+      <div class="p-1.5 flex flex-col flex-grow w-full text-center">
        <div class="title-container" data-title="Refrigerante">
         <div class="ticker-wrapper hidden">
          <div class="ticker" style="animation-duration: 12s;">
          </div>
         </div>
-        <div class="static-title text-[10px] font-bold text-gray-900 leading-tight truncate">
+        <div class="static-title text-[9px] font-bold text-gray-900 leading-tight truncate">
         </div>
        </div>
-       <p class="text-[8px] text-gray-400 mt-0.5 description">
+       <p class="text-[7px] text-gray-400 mt-0.5 description">
         Sabor: Cola
        </p>
-       <p class="text-[9px] font-semibold text-orange-500 mt-1">
+       <p class="text-[8px] font-semibold text-orange-500 mt-1">
         R$ 7,50
        </p>
-       <div class="flex justify-center mt-2">
-        <button aria-label="Adicionar Refrigerante" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2.5 py-0.5 text-[8px]">
+       <div class="flex justify-center mt-1.5">
+        <button aria-label="Adicionar Refrigerante" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[7px]">
          <i class="fas fa-plus">
          </i>
          <span>
@@ -250,25 +253,25 @@
       </div>
      </div>
      <!-- Bebida 2 -->
-     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[110px] max-w-[110px]" style="min-height: 130px">
-      <img alt="Suco de laranja em copo transparente, líquido laranja vibrante com gelo" class="w-18 h-18 object-cover rounded-full mt-2" height="72" src="https://storage.googleapis.com/a1aa/image/20906d37-ba44-4985-4780-4d6874b173bc.jpg" width="72"/>
-      <div class="p-2 flex flex-col flex-grow w-full text-center">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[95px] max-w-[95px]" style="min-height: 115px">
+      <img alt="Suco de laranja em copo transparente, líquido laranja vibrante com gelo" class="w-16 h-16 object-cover rounded-full mt-2" height="64" src="https://storage.googleapis.com/a1aa/image/20906d37-ba44-4985-4780-4d6874b173bc.jpg" width="64"/>
+      <div class="p-1.5 flex flex-col flex-grow w-full text-center">
        <div class="title-container" data-title="Suco de Laranja">
         <div class="ticker-wrapper hidden">
          <div class="ticker" style="animation-duration: 14s;">
          </div>
         </div>
-        <div class="static-title text-[10px] font-bold text-gray-900 leading-tight truncate">
+        <div class="static-title text-[9px] font-bold text-gray-900 leading-tight truncate">
         </div>
        </div>
-       <p class="text-[8px] text-gray-400 mt-0.5 description">
+       <p class="text-[7px] text-gray-400 mt-0.5 description">
         Sabor: Natural
        </p>
-       <p class="text-[9px] font-semibold text-orange-500 mt-1">
+       <p class="text-[8px] font-semibold text-orange-500 mt-1">
         R$ 8,00
        </p>
-       <div class="flex justify-center mt-2">
-        <button aria-label="Adicionar Suco de Laranja" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2.5 py-0.5 text-[8px]">
+       <div class="flex justify-center mt-1.5">
+        <button aria-label="Adicionar Suco de Laranja" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[7px]">
          <i class="fas fa-plus">
          </i>
          <span>
@@ -279,25 +282,25 @@
       </div>
      </div>
      <!-- Bebida 3 -->
-     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[110px] max-w-[110px]" style="min-height: 130px">
-      <img alt="Água mineral em garrafa transparente, garrafa com líquido claro e rótulo azul" class="w-18 h-18 object-cover rounded-full mt-2" height="72" src="https://storage.googleapis.com/a1aa/image/bea69392-4e04-44c8-a700-942c5647b237.jpg" width="72"/>
-      <div class="p-2 flex flex-col flex-grow w-full text-center">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[95px] max-w-[95px]" style="min-height: 115px">
+      <img alt="Água mineral em garrafa transparente, garrafa com líquido claro e rótulo azul" class="w-16 h-16 object-cover rounded-full mt-2" height="64" src="https://storage.googleapis.com/a1aa/image/bea69392-4e04-44c8-a700-942c5647b237.jpg" width="64"/>
+      <div class="p-1.5 flex flex-col flex-grow w-full text-center">
        <div class="title-container" data-title="Água Mineral">
         <div class="ticker-wrapper hidden">
          <div class="ticker" style="animation-duration: 12s;">
          </div>
         </div>
-        <div class="static-title text-[10px] font-bold text-gray-900 leading-tight truncate">
+        <div class="static-title text-[9px] font-bold text-gray-900 leading-tight truncate">
         </div>
        </div>
-       <p class="text-[8px] text-gray-400 mt-0.5 description">
+       <p class="text-[7px] text-gray-400 mt-0.5 description">
         Sem gás
        </p>
-       <p class="text-[9px] font-semibold text-orange-500 mt-1">
+       <p class="text-[8px] font-semibold text-orange-500 mt-1">
         R$ 5,00
        </p>
-       <div class="flex justify-center mt-2">
-        <button aria-label="Adicionar Água Mineral" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2.5 py-0.5 text-[8px]">
+       <div class="flex justify-center mt-1.5">
+        <button aria-label="Adicionar Água Mineral" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[7px]">
          <i class="fas fa-plus">
          </i>
          <span>
@@ -308,25 +311,25 @@
       </div>
      </div>
      <!-- Bebida 4 -->
-     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[110px] max-w-[110px]" style="min-height: 130px">
-      <img alt="Copo de café com espuma cremosa, copo transparente com café expresso e espuma branca" class="w-18 h-18 object-cover rounded-full mt-2" height="72" src="https://storage.googleapis.com/a1aa/image/07d58733-b214-4544-48de-28f474a8f5b6.jpg" width="72"/>
-      <div class="p-2 flex flex-col flex-grow w-full text-center">
+     <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center min-w-[95px] max-w-[95px]" style="min-height: 115px">
+      <img alt="Copo de café com espuma cremosa, copo transparente com café expresso e espuma branca" class="w-16 h-16 object-cover rounded-full mt-2" height="64" src="https://storage.googleapis.com/a1aa/image/07d58733-b214-4544-48de-28f474a8f5b6.jpg" width="64"/>
+      <div class="p-1.5 flex flex-col flex-grow w-full text-center">
        <div class="title-container" data-title="Café">
         <div class="ticker-wrapper hidden">
          <div class="ticker" style="animation-duration: 10s;">
          </div>
         </div>
-        <div class="static-title text-[10px] font-bold text-gray-900 leading-tight truncate">
+        <div class="static-title text-[9px] font-bold text-gray-900 leading-tight truncate">
         </div>
        </div>
-       <p class="text-[8px] text-gray-400 mt-0.5 description">
+       <p class="text-[7px] text-gray-400 mt-0.5 description">
         Expresso
        </p>
-       <p class="text-[9px] font-semibold text-orange-500 mt-1">
+       <p class="text-[8px] font-semibold text-orange-500 mt-1">
         R$ 6,50
        </p>
-       <div class="flex justify-center mt-2">
-        <button aria-label="Adicionar Café" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2.5 py-0.5 text-[8px]">
+       <div class="flex justify-center mt-1.5">
+        <button aria-label="Adicionar Café" class="bg-orange-500 text-white rounded-full flex items-center justify-center space-x-1 px-2 py-0.5 text-[7px]">
          <i class="fas fa-plus">
          </i>
          <span>
